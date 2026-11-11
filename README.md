@@ -1,16 +1,20 @@
-## Hi there 👋
+# Hey, I'm Night 👋
 
-<!--
-**NightAI707/NightAI707** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I'm a student at IIT Patna and an independent builder interested in AI, software engineering, and emerging technologies.
 
-Here are some ideas to get you started:
+### About Me
+- Building **Elera AI**, an AI-powered creative editing platform.
+- Exploring generative AI, intelligent systems, and AI-native computing.
+- Interested in open-source development and cybersecurity.
+- Previously built AI products, Roblox experiences, and research projects.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### Current Focus
+- Building AI-powered applications
+- Learning software engineering and Git
+- Exploring open-source contributions
+
+### Technologies & Tools
+Python · JavaScript · Git · GitHub · AI/ML
+
+### Connect
+- [LinkedIn](https://www.linkedin.com/in/night-edge-667aa32b4/)
