@@ -1,0 +1,46 @@
+<svg fill="none" viewBox="0 0 840 118" width="100%" xmlns="http://www.w3.org/2000/svg">
+  
+  <defs>
+    <linearGradient id="chassisGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141923"/>
+      <stop offset="50%" stop-color="#0d1118"/>
+      <stop offset="100%" stop-color="#080b10"/>
+    </linearGradient>
+    <linearGradient id="chassisRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="40%" stop-color="#22d3ee" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="oledGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020305"/>
+      <stop offset="100%" stop-color="#06090e"/>
+    </linearGradient>
+    <filter id="cyanGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="1.4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="1" y="1" width="838" height="116" rx="18" fill="url(#chassisGrad)" stroke="url(#chassisRim)" stroke-width="1.2"/>
+  <line x1="20" y1="1.8" x2="820" y2="1.8" stroke="#ffffff" stroke-opacity="0.22" stroke-width="0.9"/>
+  <g transform="translate(12,12)"><circle r="4.2" fill="#07090d" stroke="#263040" stroke-width="0.9"/><line x1="-2.2" y1="-2.2" x2="2.2" y2="2.2" stroke="#364358" stroke-width="0.9" stroke-linecap="round"/></g>
+  <g transform="translate(828,12)"><circle r="4.2" fill="#07090d" stroke="#263040" stroke-width="0.9"/><line x1="-2.2" y1="-2.2" x2="2.2" y2="2.2" stroke="#364358" stroke-width="0.9" stroke-linecap="round"/></g>
+  <g transform="translate(12,106)"><circle r="4.2" fill="#07090d" stroke="#263040" stroke-width="0.9"/><line x1="-2.2" y1="-2.2" x2="2.2" y2="2.2" stroke="#364358" stroke-width="0.9" stroke-linecap="round"/></g>
+  <g transform="translate(828,106)"><circle r="4.2" fill="#07090d" stroke="#263040" stroke-width="0.9"/><line x1="-2.2" y1="-2.2" x2="2.2" y2="2.2" stroke="#364358" stroke-width="0.9" stroke-linecap="round"/></g>
+
+  <text x="30" y="29" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Inter, sans-serif" font-size="13.5" font-weight="600" fill="#cbd5e1">Core Stack</text>
+  <text x="810" y="29" text-anchor="end" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="11" fill="#475569">AI  /  SYSTEMS  /  WEB</text>
+
+  <rect x="28" y="42" width="784" height="56" rx="10" fill="url(#oledGrad)" stroke="#1a2433" stroke-width="1.2"/>
+  <rect x="38.0" y="55" width="64" height="30" rx="8" fill="#0d131d" stroke="#1e293b" stroke-width="1"/><circle cx="48.0" cy="70" r="2.6" fill="#00e5ff"/><text x="55.0" y="73.5" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#cbd5e1">Python</text><rect x="108.0" y="55" width="64" height="30" rx="8" fill="#0d131d" stroke="#1e293b" stroke-width="1"/><circle cx="118.0" cy="70" r="2.6" fill="#38bdf8"/><text x="125.0" y="73.5" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#cbd5e1">TypeScr</text><rect x="178.0" y="55" width="64" height="30" rx="8" fill="#0d131d" stroke="#1e293b" stroke-width="1"/><circle cx="188.0" cy="70" r="2.6" fill="#7dd3fc"/><text x="195.0" y="73.5" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#cbd5e1">JavaScr</text><rect x="248.0" y="55" width="64" height="30" rx="8" fill="#0d131d" stroke="#1e293b" stroke-width="1"/><circle cx="258.0" cy="70" r="2.6" fill="#a5f3fc"/><text x="265.0" y="73.5" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#cbd5e1">Lua</text><rect x="318.0" y="55" width="64" height="30" rx="8" fill="#0d131d" stroke="#1e293b" stroke-width="1"/><circle cx="328.0" cy="70" r="2.6" fill="#22d3ee"/><text x="335.0" y="73.5" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#cbd5e1">PyTorch</text><rect x="388.0" y="55" width="64" height="30" rx="8" fill="#0d131d" stroke="#1e293b" stroke-width="1"/><circle cx="398.0" cy="70" r="2.6" fill="#06b6d4"/><text x="405.0" y="73.5" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#cbd5e1">TensorF</text><rect x="458.0" y="55" width="64" height="30" rx="8" fill="#0d131d" stroke="#1e293b" stroke-width="1"/><circle cx="468.0" cy="70" r="2.6" fill="#00e5ff"/><text x="475.0" y="73.5" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#cbd5e1">React</text><rect x="528.0" y="55" width="64" height="30" rx="8" fill="#0d131d" stroke="#1e293b" stroke-width="1"/><circle cx="538.0" cy="70" r="2.6" fill="#e2e8f0"/><text x="545.0" y="73.5" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#cbd5e1">Next.js</text><rect x="598.0" y="55" width="64" height="30" rx="8" fill="#0d131d" stroke="#1e293b" stroke-width="1"/><circle cx="608.0" cy="70" r="2.6" fill="#38bdf8"/><text x="615.0" y="73.5" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#cbd5e1">Docker</text><rect x="668.0" y="55" width="64" height="30" rx="8" fill="#0d131d" stroke="#1e293b" stroke-width="1"/><circle cx="678.0" cy="70" r="2.6" fill="#7dd3fc"/><text x="685.0" y="73.5" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#cbd5e1">Git</text><rect x="738.0" y="55" width="64" height="30" rx="8" fill="#0d131d" stroke="#1e293b" stroke-width="1"/><circle cx="748.0" cy="70" r="2.6" fill="#a5f3fc"/><text x="755.0" y="73.5" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#cbd5e1">Linux</text>
+</svg>

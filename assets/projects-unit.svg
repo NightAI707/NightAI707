@@ -1,0 +1,67 @@
+<svg fill="none" viewBox="0 0 840 158" width="100%" xmlns="http://www.w3.org/2000/svg">
+  
+  <defs>
+    <linearGradient id="chassisGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141923"/>
+      <stop offset="50%" stop-color="#0d1118"/>
+      <stop offset="100%" stop-color="#080b10"/>
+    </linearGradient>
+    <linearGradient id="chassisRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="40%" stop-color="#22d3ee" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="oledGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020305"/>
+      <stop offset="100%" stop-color="#06090e"/>
+    </linearGradient>
+    <filter id="cyanGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="1.4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g><rect x="1" y="1" width="838" height="72" rx="14" fill="url(#chassisGrad)" stroke="url(#chassisRim)" stroke-width="1.1"/><line x1="18" y1="2" x2="822" y2="2" stroke="#ffffff" stroke-opacity="0.18" stroke-width="0.8"/><rect x="1" y="10" width="4" height="54" rx="2" fill="#00e5ff"/><text x="26" y="30" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Inter, sans-serif" font-size="16" font-weight="700" fill="#f8fafc">elera-ai</text><text x="26" y="51" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="11.5" fill="#7d8590">AI-powered creative editing platform built around generative workflows and fast visual tooling.</text><circle cx="622" cy="37" r="4.5" fill="#00e5ff"/><text x="634" y="41" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Inter, sans-serif" font-size="12.5" fill="#cbd5e1">Python</text><polygon points="724,31 726,35 730,35.5 727,38.5 727.8,42.5 724,40.5 720.2,42.5 721,38.5 718,35.5 722,35" fill="#64748b"/><g transform="translate(742,20)">
+  <rect width="60" height="34" rx="6" fill="#030508" stroke="#1b2330" stroke-width="1"/>
+  <polygon points="12,6 22,6 20,8.2 14,8.2" fill="#0f1724"/>
+  <polygon points="22.5,6.8 22.5,16.2 20.3,14.8 20.3,8.5" fill="#0f1724"/>
+  <polygon points="22.5,17.8 22.5,27.2 20.3,25.5 20.3,19.2" fill="#0f1724"/>
+  <polygon points="12,28 22,28 20,25.8 14,25.8" fill="#0f1724"/>
+  <polygon points="11.5,17.8 13.7,19.2 13.7,25.5 11.5,27.2" fill="#0f1724"/>
+  <polygon points="11.5,6.8 13.7,8.5 13.7,14.8 11.5,16.2" fill="#0f1724"/>
+  <polygon points="12.5,17 14,15.8 20,15.8 21.5,17 20,18.2 14,18.2" fill="#0f1724"/>
+  <polygon points="34,6 44,6 42,8.2 36,8.2" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="44.5,6.8 44.5,16.2 42.3,14.8 42.3,8.5" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="44.5,17.8 44.5,27.2 42.3,25.5 42.3,19.2" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="34,28 44,28 42,25.8 36,25.8" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="33.5,17.8 35.7,19.2 35.7,25.5 33.5,27.2" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="33.5,6.8 35.7,8.5 35.7,14.8 33.5,16.2" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="34.5,17 36,15.8 42,15.8 43.5,17 42,18.2 36,18.2" fill="#0f1724"/>
+  </g></g><g><rect x="1" y="85" width="838" height="72" rx="14" fill="url(#chassisGrad)" stroke="url(#chassisRim)" stroke-width="1.1"/><line x1="18" y1="86" x2="822" y2="86" stroke="#ffffff" stroke-opacity="0.18" stroke-width="0.8"/><rect x="1" y="94" width="4" height="54" rx="2" fill="#38bdf8"/><text x="26" y="114" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Inter, sans-serif" font-size="16" font-weight="700" fill="#f8fafc">NightAI707</text><text x="26" y="135" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="11.5" fill="#7d8590">Personal developer profile</text><circle cx="622" cy="121" r="4.5" fill="#7dd3fc"/><text x="634" y="125" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Inter, sans-serif" font-size="12.5" fill="#cbd5e1">Markdown</text><polygon points="724,115 726,119 730,119.5 727,122.5 727.8,126.5 724,124.5 720.2,126.5 721,122.5 718,119.5 722,119" fill="#64748b"/><g transform="translate(742,104)">
+  <rect width="60" height="34" rx="6" fill="#030508" stroke="#1b2330" stroke-width="1"/>
+  <polygon points="12,6 22,6 20,8.2 14,8.2" fill="#0f1724"/>
+  <polygon points="22.5,6.8 22.5,16.2 20.3,14.8 20.3,8.5" fill="#0f1724"/>
+  <polygon points="22.5,17.8 22.5,27.2 20.3,25.5 20.3,19.2" fill="#0f1724"/>
+  <polygon points="12,28 22,28 20,25.8 14,25.8" fill="#0f1724"/>
+  <polygon points="11.5,17.8 13.7,19.2 13.7,25.5 11.5,27.2" fill="#0f1724"/>
+  <polygon points="11.5,6.8 13.7,8.5 13.7,14.8 11.5,16.2" fill="#0f1724"/>
+  <polygon points="12.5,17 14,15.8 20,15.8 21.5,17 20,18.2 14,18.2" fill="#0f1724"/>
+  <polygon points="34,6 44,6 42,8.2 36,8.2" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="44.5,6.8 44.5,16.2 42.3,14.8 42.3,8.5" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="44.5,17.8 44.5,27.2 42.3,25.5 42.3,19.2" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="34,28 44,28 42,25.8 36,25.8" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="33.5,17.8 35.7,19.2 35.7,25.5 33.5,27.2" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="33.5,6.8 35.7,8.5 35.7,14.8 33.5,16.2" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="34.5,17 36,15.8 42,15.8 43.5,17 42,18.2 36,18.2" fill="#0f1724"/>
+  </g></g>
+</svg>

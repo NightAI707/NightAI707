@@ -1,0 +1,14 @@
+<svg fill="none" viewBox="0 0 272 74" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#082f3a"/>
+      <stop offset="100%" stop-color="#04161c"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="270" height="72" rx="14" fill="url(#tg)" stroke="#22d3ee" stroke-opacity="0.42" stroke-width="1.1"/>
+  <line x1="16" y1="2" x2="256" y2="2" stroke="#ffffff" stroke-opacity="0.28" stroke-width="0.9"/>
+  <rect x="1" y="14" width="3" height="46" rx="1.5" fill="#00e5ff"/>
+  <text x="20" y="33" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Inter, sans-serif" font-size="16" font-weight="700" fill="#f8fafc">Elera AI</text>
+  <text x="20" y="53" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="11.5" fill="#94a3b8">creative-ai platform</text>
+  <path d="M242 25 H252 V35 M252 25 L241 36" stroke="#00e5ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

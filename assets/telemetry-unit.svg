@@ -1,0 +1,116 @@
+<svg fill="none" viewBox="0 0 840 236" width="100%" xmlns="http://www.w3.org/2000/svg">
+  
+  <defs>
+    <linearGradient id="chassisGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141923"/>
+      <stop offset="50%" stop-color="#0d1118"/>
+      <stop offset="100%" stop-color="#080b10"/>
+    </linearGradient>
+    <linearGradient id="chassisRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="40%" stop-color="#22d3ee" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="oledGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020305"/>
+      <stop offset="100%" stop-color="#06090e"/>
+    </linearGradient>
+    <filter id="cyanGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="1.4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="1" y="1" width="838" height="234" rx="18" fill="url(#chassisGrad)" stroke="url(#chassisRim)" stroke-width="1.2"/>
+  <line x1="20" y1="1.8" x2="820" y2="1.8" stroke="#ffffff" stroke-opacity="0.22" stroke-width="0.9"/>
+  <g transform="translate(12,12)"><circle r="4.2" fill="#07090d" stroke="#263040" stroke-width="0.9"/><line x1="-2.2" y1="-2.2" x2="2.2" y2="2.2" stroke="#364358" stroke-width="0.9" stroke-linecap="round"/></g>
+  <g transform="translate(828,12)"><circle r="4.2" fill="#07090d" stroke="#263040" stroke-width="0.9"/><line x1="-2.2" y1="-2.2" x2="2.2" y2="2.2" stroke="#364358" stroke-width="0.9" stroke-linecap="round"/></g>
+  <g transform="translate(12,224)"><circle r="4.2" fill="#07090d" stroke="#263040" stroke-width="0.9"/><line x1="-2.2" y1="-2.2" x2="2.2" y2="2.2" stroke="#364358" stroke-width="0.9" stroke-linecap="round"/></g>
+  <g transform="translate(828,224)"><circle r="4.2" fill="#07090d" stroke="#263040" stroke-width="0.9"/><line x1="-2.2" y1="-2.2" x2="2.2" y2="2.2" stroke="#364358" stroke-width="0.9" stroke-linecap="round"/></g>
+
+  <text x="30" y="32" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Inter, sans-serif" font-size="13.5" font-weight="600" fill="#cbd5e1">Contributions per month</text>
+  <text x="810" y="32" text-anchor="end" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="11" fill="#475569">TELEMETRY // LIVE</text>
+
+  <rect x="28" y="46" width="496" height="166" rx="12" fill="url(#oledGrad)" stroke="#1a2433" stroke-width="1.2"/>
+  <rect x="69.0" y="170.9" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="69.0" y="159.8" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="69.0" y="148.7" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="69.0" y="137.6" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="69.0" y="126.5" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="69.0" y="115.4" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="69.0" y="104.3" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="69.0" y="93.2" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="69.0" y="82.1" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="69.0" y="71.0" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="69.0" y="59.9" width="42" height="8.5" rx="2" fill="#0f1724"/><text x="90.0" y="200" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#64748b">May</text><rect x="131.0" y="170.9" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="131.0" y="159.8" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="131.0" y="148.7" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="131.0" y="137.6" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="131.0" y="126.5" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="131.0" y="115.4" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="131.0" y="104.3" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="131.0" y="93.2" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="131.0" y="82.1" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="131.0" y="71.0" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="131.0" y="59.9" width="42" height="8.5" rx="2" fill="#0f1724"/><text x="152.0" y="200" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#64748b">Jun</text><rect x="193.0" y="170.9" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="193.0" y="159.8" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="193.0" y="148.7" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="193.0" y="137.6" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="193.0" y="126.5" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="193.0" y="115.4" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="193.0" y="104.3" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="193.0" y="93.2" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="193.0" y="82.1" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="193.0" y="71.0" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="193.0" y="59.9" width="42" height="8.5" rx="2" fill="#0f1724"/><text x="214.0" y="200" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#64748b">Jul</text><rect x="255.0" y="170.9" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="255.0" y="159.8" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="255.0" y="148.7" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="255.0" y="137.6" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="255.0" y="126.5" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="255.0" y="115.4" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="255.0" y="104.3" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="255.0" y="93.2" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="255.0" y="82.1" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="255.0" y="71.0" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="255.0" y="59.9" width="42" height="8.5" rx="2" fill="#0f1724"/><text x="276.0" y="200" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#64748b">Aug</text><rect x="317.0" y="170.9" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="317.0" y="159.8" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="317.0" y="148.7" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="317.0" y="137.6" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="317.0" y="126.5" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="317.0" y="115.4" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="317.0" y="104.3" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="317.0" y="93.2" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="317.0" y="82.1" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="317.0" y="71.0" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="317.0" y="59.9" width="42" height="8.5" rx="2" fill="#0f1724"/><text x="338.0" y="200" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#64748b">Sep</text><rect x="379.0" y="170.9" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="379.0" y="159.8" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="379.0" y="148.7" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="379.0" y="137.6" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="379.0" y="126.5" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="379.0" y="115.4" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="379.0" y="104.3" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="379.0" y="93.2" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="379.0" y="82.1" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="379.0" y="71.0" width="42" height="8.5" rx="2" fill="#0f1724"/><rect x="379.0" y="59.9" width="42" height="8.5" rx="2" fill="#0f1724"/><text x="400.0" y="200" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#64748b">Oct</text><rect x="441.0" y="170.9" width="42" height="8.5" rx="2" fill="#00e5ff" filter="url(#softGlow)"/><rect x="441.0" y="159.8" width="42" height="8.5" rx="2" fill="#00e5ff" filter="url(#softGlow)"/><rect x="441.0" y="148.7" width="42" height="8.5" rx="2" fill="#00e5ff" filter="url(#softGlow)"/><rect x="441.0" y="137.6" width="42" height="8.5" rx="2" fill="#00e5ff" filter="url(#softGlow)"/><rect x="441.0" y="126.5" width="42" height="8.5" rx="2" fill="#00e5ff" filter="url(#softGlow)"/><rect x="441.0" y="115.4" width="42" height="8.5" rx="2" fill="#00e5ff" filter="url(#softGlow)"/><rect x="441.0" y="104.3" width="42" height="8.5" rx="2" fill="#00e5ff" filter="url(#softGlow)"/><rect x="441.0" y="93.2" width="42" height="8.5" rx="2" fill="#00e5ff" filter="url(#softGlow)"/><rect x="441.0" y="82.1" width="42" height="8.5" rx="2" fill="#00e5ff" filter="url(#softGlow)"/><rect x="441.0" y="71.0" width="42" height="8.5" rx="2" fill="#a5f3fc" filter="url(#softGlow)"/><rect x="441.0" y="59.9" width="42" height="8.5" rx="2" fill="#a5f3fc" filter="url(#softGlow)"/><text x="462.0" y="54.9" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#94a3b8">3</text><text x="462.0" y="200" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#64748b">Nov</text>
+  <g transform="translate(548,58)">
+  <rect width="82" height="34" rx="6" fill="#030508" stroke="#1b2330" stroke-width="1"/>
+  <polygon points="12,6 22,6 20,8.2 14,8.2" fill="#0f1724"/>
+  <polygon points="22.5,6.8 22.5,16.2 20.3,14.8 20.3,8.5" fill="#0f1724"/>
+  <polygon points="22.5,17.8 22.5,27.2 20.3,25.5 20.3,19.2" fill="#0f1724"/>
+  <polygon points="12,28 22,28 20,25.8 14,25.8" fill="#0f1724"/>
+  <polygon points="11.5,17.8 13.7,19.2 13.7,25.5 11.5,27.2" fill="#0f1724"/>
+  <polygon points="11.5,6.8 13.7,8.5 13.7,14.8 11.5,16.2" fill="#0f1724"/>
+  <polygon points="12.5,17 14,15.8 20,15.8 21.5,17 20,18.2 14,18.2" fill="#0f1724"/>
+  <polygon points="34,6 44,6 42,8.2 36,8.2" fill="#0f1724"/>
+  <polygon points="44.5,6.8 44.5,16.2 42.3,14.8 42.3,8.5" fill="#0f1724"/>
+  <polygon points="44.5,17.8 44.5,27.2 42.3,25.5 42.3,19.2" fill="#0f1724"/>
+  <polygon points="34,28 44,28 42,25.8 36,25.8" fill="#0f1724"/>
+  <polygon points="33.5,17.8 35.7,19.2 35.7,25.5 33.5,27.2" fill="#0f1724"/>
+  <polygon points="33.5,6.8 35.7,8.5 35.7,14.8 33.5,16.2" fill="#0f1724"/>
+  <polygon points="34.5,17 36,15.8 42,15.8 43.5,17 42,18.2 36,18.2" fill="#0f1724"/>
+  <polygon points="56,6 66,6 64,8.2 58,8.2" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="66.5,6.8 66.5,16.2 64.3,14.8 64.3,8.5" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="66.5,17.8 66.5,27.2 64.3,25.5 64.3,19.2" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="56,28 66,28 64,25.8 58,25.8" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="55.5,17.8 57.7,19.2 57.7,25.5 55.5,27.2" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="55.5,6.8 57.7,8.5 57.7,14.8 55.5,16.2" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="56.5,17 58,15.8 64,15.8 65.5,17 64,18.2 58,18.2" fill="#0f1724"/>
+  </g><text x="644" y="72" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Inter, sans-serif" font-size="13.5" font-weight="600" fill="#e2e8f0">Current streak</text><text x="644" y="88" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="11" fill="#64748b">longest 1 days</text><g transform="translate(548,114)">
+  <rect width="82" height="34" rx="6" fill="#030508" stroke="#1b2330" stroke-width="1"/>
+  <polygon points="12,6 22,6 20,8.2 14,8.2" fill="#0f1724"/>
+  <polygon points="22.5,6.8 22.5,16.2 20.3,14.8 20.3,8.5" fill="#0f1724"/>
+  <polygon points="22.5,17.8 22.5,27.2 20.3,25.5 20.3,19.2" fill="#0f1724"/>
+  <polygon points="12,28 22,28 20,25.8 14,25.8" fill="#0f1724"/>
+  <polygon points="11.5,17.8 13.7,19.2 13.7,25.5 11.5,27.2" fill="#0f1724"/>
+  <polygon points="11.5,6.8 13.7,8.5 13.7,14.8 11.5,16.2" fill="#0f1724"/>
+  <polygon points="12.5,17 14,15.8 20,15.8 21.5,17 20,18.2 14,18.2" fill="#0f1724"/>
+  <polygon points="34,6 44,6 42,8.2 36,8.2" fill="#0f1724"/>
+  <polygon points="44.5,6.8 44.5,16.2 42.3,14.8 42.3,8.5" fill="#0f1724"/>
+  <polygon points="44.5,17.8 44.5,27.2 42.3,25.5 42.3,19.2" fill="#0f1724"/>
+  <polygon points="34,28 44,28 42,25.8 36,25.8" fill="#0f1724"/>
+  <polygon points="33.5,17.8 35.7,19.2 35.7,25.5 33.5,27.2" fill="#0f1724"/>
+  <polygon points="33.5,6.8 35.7,8.5 35.7,14.8 33.5,16.2" fill="#0f1724"/>
+  <polygon points="34.5,17 36,15.8 42,15.8 43.5,17 42,18.2 36,18.2" fill="#0f1724"/>
+  <polygon points="56,6 66,6 64,8.2 58,8.2" fill="#0f1724"/>
+  <polygon points="66.5,6.8 66.5,16.2 64.3,14.8 64.3,8.5" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="66.5,17.8 66.5,27.2 64.3,25.5 64.3,19.2" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="56,28 66,28 64,25.8 58,25.8" fill="#0f1724"/>
+  <polygon points="55.5,17.8 57.7,19.2 57.7,25.5 55.5,27.2" fill="#0f1724"/>
+  <polygon points="55.5,6.8 57.7,8.5 57.7,14.8 55.5,16.2" fill="#0f1724"/>
+  <polygon points="56.5,17 58,15.8 64,15.8 65.5,17 64,18.2 58,18.2" fill="#0f1724"/>
+  </g><text x="644" y="128" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Inter, sans-serif" font-size="13.5" font-weight="600" fill="#e2e8f0">Active days</text><text x="644" y="144" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="11" fill="#64748b">of the last 369</text><g transform="translate(548,170)">
+  <rect width="82" height="34" rx="6" fill="#030508" stroke="#1b2330" stroke-width="1"/>
+  <polygon points="12,6 22,6 20,8.2 14,8.2" fill="#0f1724"/>
+  <polygon points="22.5,6.8 22.5,16.2 20.3,14.8 20.3,8.5" fill="#0f1724"/>
+  <polygon points="22.5,17.8 22.5,27.2 20.3,25.5 20.3,19.2" fill="#0f1724"/>
+  <polygon points="12,28 22,28 20,25.8 14,25.8" fill="#0f1724"/>
+  <polygon points="11.5,17.8 13.7,19.2 13.7,25.5 11.5,27.2" fill="#0f1724"/>
+  <polygon points="11.5,6.8 13.7,8.5 13.7,14.8 11.5,16.2" fill="#0f1724"/>
+  <polygon points="12.5,17 14,15.8 20,15.8 21.5,17 20,18.2 14,18.2" fill="#0f1724"/>
+  <polygon points="34,6 44,6 42,8.2 36,8.2" fill="#0f1724"/>
+  <polygon points="44.5,6.8 44.5,16.2 42.3,14.8 42.3,8.5" fill="#0f1724"/>
+  <polygon points="44.5,17.8 44.5,27.2 42.3,25.5 42.3,19.2" fill="#0f1724"/>
+  <polygon points="34,28 44,28 42,25.8 36,25.8" fill="#0f1724"/>
+  <polygon points="33.5,17.8 35.7,19.2 35.7,25.5 33.5,27.2" fill="#0f1724"/>
+  <polygon points="33.5,6.8 35.7,8.5 35.7,14.8 33.5,16.2" fill="#0f1724"/>
+  <polygon points="34.5,17 36,15.8 42,15.8 43.5,17 42,18.2 36,18.2" fill="#0f1724"/>
+  <polygon points="56,6 66,6 64,8.2 58,8.2" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="66.5,6.8 66.5,16.2 64.3,14.8 64.3,8.5" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="66.5,17.8 66.5,27.2 64.3,25.5 64.3,19.2" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="56,28 66,28 64,25.8 58,25.8" fill="#00e5ff" filter="url(#softGlow)"/>
+  <polygon points="55.5,17.8 57.7,19.2 57.7,25.5 55.5,27.2" fill="#0f1724"/>
+  <polygon points="55.5,6.8 57.7,8.5 57.7,14.8 55.5,16.2" fill="#0f1724"/>
+  <polygon points="56.5,17 58,15.8 64,15.8 65.5,17 64,18.2 58,18.2" fill="#00e5ff" filter="url(#softGlow)"/>
+  </g><text x="644" y="184" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Inter, sans-serif" font-size="13.5" font-weight="600" fill="#e2e8f0">Busiest day</text><text x="644" y="200" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="11" fill="#64748b">on Nov 11</text>
+</svg>
