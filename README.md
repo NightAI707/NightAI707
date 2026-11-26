@@ -1,6 +1,6 @@
 <!-- Banner -->
 <a href="https://github.com/NightAI707">
-  <img src="./assets/banner.svg" alt="Night Edge Banner" style="width:100%; height:auto" />
+  <img src="./assets/banner.png" alt="Night Edge" style="width:100%; height:auto" />
 </a>
 
 <div align="center">
@@ -28,7 +28,7 @@
 <br/>
 
 <!-- Who Am I? -->
-<img src="./assets/liquid-emblem.svg" width="360" align="left" />
+<img src="./assets/emblem.jpg" width="340" align="left" />
 <div align="center">
 
 **Who Am I?**
@@ -36,11 +36,11 @@
 
 <div align="justify">
 
-I am **Night Edge**, an **AI Engineer** and student at `IIT Patna`, currently building **Elera AI** while exploring the frontier of `Generative AI` and `AI-Native Computing`. My work is driven by **continuous experimentation**, **systems thinking**, and a commitment to crafting **intelligent products** that feel effortless to use.
+I am **Night Edge**, a student at `IIT Patna` and an independent builder working on **AI**, software engineering, and emerging tech. Right now I am building **Elera AI**, an AI-powered creative editing platform, and spending most of my time shipping products rather than just talking about them.
 
-Over time, I have built across **AI systems**, **full-stack software**, and **interactive worlds**, where `logic` meets `creative design`. Alongside generative pipelines and autonomous agents, I have shipped **AI products**, **Roblox experiences**, and **research prototypes** spanning `Python`, `TypeScript`, and `Lua`.
+Before Elera, I built **AI tools**, **Roblox experiences**, and **research prototypes** across `Python`, `JavaScript`, `TypeScript`, and `Lua`. I care about software that feels sharp, fast, and intentional, where clean engineering meets visual design.
 
-At the moment, I am focused on **Elera AI**, reimagining creative editing workflows from the ground up with `generative models`, `computer vision`, and `cloud infrastructure`. I also explore **cybersecurity** and **open-source software**, constantly pushing myself to build cleaner, faster, and smarter systems.
+Outside my main builds, I dig into **generative AI**, **intelligent systems**, **cybersecurity**, and **open-source software**, always picking up whatever new stack or paper helps me build the next thing better.
 
 </div>
 
@@ -74,7 +74,7 @@ At the moment, I am focused on **Elera AI**, reimagining creative editing workfl
 </div>
 <br/>
 
-<img src="./assets/glass-shard.svg" width="106" align="right" />
+<img src="./assets/glass-icon.jpg" width="106" align="right" />
 
 > [!Caution]
 >
@@ -104,7 +104,9 @@ At the moment, I am focused on **Elera AI**, reimagining creative editing workfl
       <img src="./assets/stack-title.svg" width="100%" />
       <br/>
       <br/>
-      <img src="./assets/stack-grid.svg" width="100%" />
+      <img src="https://skillicons.dev/icons?i=py,js,ts,lua,html,css&theme=dark" /><br>
+      <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,react,nextjs,nodejs,tailwind&theme=dark" /><br>
+      <img src="https://skillicons.dev/icons?i=git,github,docker,linux,vscode,figma&theme=dark" /><br>
     </td>
     <!-- Project + Streak Right -->
     <td valign="top" width="55%">
