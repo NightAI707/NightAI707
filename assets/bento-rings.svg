@@ -1,0 +1,35 @@
+<svg fill="none" viewBox="0 0 344 230" width="100%" xmlns="http://www.w3.org/2000/svg">
+  
+  <defs>
+    <linearGradient id="glassBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111824" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#080c12" stop-opacity="0.98"/>
+      <stop offset="100%" stop-color="#040609" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="glassRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.32"/>
+      <stop offset="45%" stop-color="#22d3ee" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.08"/>
+    </linearGradient>
+    <radialGradient id="cyanAura" cx="80%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.16"/>
+      <stop offset="60%" stop-color="#0891b2" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0.0"/>
+    </linearGradient>
+    <filter id="cyanGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="1" y="1" width="342" height="228" rx="20" fill="url(#glassBg)" stroke="url(#glassRim)" stroke-width="1.2"/>
+  <line x1="24" y1="2" x2="320" y2="2" stroke="#ffffff" stroke-opacity="0.28" stroke-width="0.9"/>
+
+  <text x="24" y="34" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="10.5" letter-spacing="1.8" fill="#22d3ee">ACTIVITY RINGS</text>
+  <circle cx="104" cy="128" r="64" stroke="#ffffff" stroke-opacity="0.06" stroke-width="9" fill="none"/><circle cx="104" cy="128" r="64" stroke="#00e5ff" stroke-width="9" stroke-linecap="round" fill="none" stroke-dasharray="48.3 402.1" transform="rotate(-90 104 128)" filter="url(#cyanGlow)"/><circle cx="104" cy="128" r="48" stroke="#ffffff" stroke-opacity="0.06" stroke-width="9" fill="none"/><circle cx="104" cy="128" r="48" stroke="#38bdf8" stroke-width="9" stroke-linecap="round" fill="none" stroke-dasharray="36.2 301.6" transform="rotate(-90 104 128)" filter="url(#cyanGlow)"/><circle cx="104" cy="128" r="32" stroke="#ffffff" stroke-opacity="0.06" stroke-width="9" fill="none"/><circle cx="104" cy="128" r="32" stroke="#a5f3fc" stroke-width="9" stroke-linecap="round" fill="none" stroke-dasharray="24.1 201.1" transform="rotate(-90 104 128)" filter="url(#cyanGlow)"/>
+  <circle cx="204" cy="74" r="3.5" fill="#00e5ff"/><text x="215" y="78" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="9.5" letter-spacing="1.2" fill="#64748b">CONTRIBUTIONS</text><text x="215" y="100" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Inter, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">3</text><circle cx="204" cy="124" r="3.5" fill="#38bdf8"/><text x="215" y="128" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="9.5" letter-spacing="1.2" fill="#64748b">ACTIVE DAYS</text><text x="215" y="150" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Inter, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">1</text><circle cx="204" cy="174" r="3.5" fill="#a5f3fc"/><text x="215" y="178" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="9.5" letter-spacing="1.2" fill="#64748b">BEST STREAK</text><text x="215" y="200" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Inter, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">1d</text>
+</svg>
