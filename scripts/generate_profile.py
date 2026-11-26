@@ -413,52 +413,65 @@ def build_telemetry_row(m: dict) -> str:
 
 
 def build_stack_spotlight() -> str:
-    # Inspired by Image 6: Dark frosted tile grid with central blue/indigo spotlight & real brand logos
-    w, h = 840, 232
+    # Apple Creator Studio 2x5 squircle icon grid with labels underneath each squircle
+    w, h = 840, 340
     tiles = [
-        ("Python", '<path fill="#3776AB" d="M11.9 2C7.3 2 7.6 4 7.6 4v2.1h4.4v.6H5.8S2.5 6.3 2.5 11s2.9 4.5 2.9 4.5h1.7v-2.2s-.1-2.9 2.8-2.9h4.6s2.6 0 2.6-2.5V4.4S17.5 2 11.9 2zm-2.5 1.4a.8.8 0 1 1 0 1.6.8.8 0 0 1 0-1.6z"/><path fill="#FFD43B" d="M12.1 22c4.6 0 4.3-2 4.3-2v-2.1H12v-.6h6.2s3.3.4 3.3-4.3-2.9-4.5-2.9-4.5h-1.7v2.2s.1 2.9-2.8 2.9H9.5s-2.6 0-2.6 2.5v3.5S6.5 22 12.1 22zm2.5-1.4a.8.8 0 1 1 0-1.6.8.8 0 0 1 0 1.6z"/>'),
-        ("TypeScript", '<rect x="2" y="2" width="20" height="20" rx="3" fill="#3178C6"/><path fill="#ffffff" d="M13.5 12.6H11v6.9H9.1v-6.9H6.6V11h6.9v1.6zm1.1 5.1c.6.4 1.4.6 2.2.6.9 0 1.5-.3 1.5-.9 0-.5-.4-.8-1.4-1.2-1.5-.5-2.4-1.2-2.4-2.5 0-1.5 1.2-2.5 3.1-2.5.9 0 1.7.2 2.2.5l-.5 1.5c-.4-.2-1-.4-1.7-.4-.8 0-1.3.3-1.3.8 0 .5.4.8 1.5 1.2 1.6.6 2.3 1.3 2.3 2.6 0 1.5-1.1 2.6-3.4 2.6-1 0-2-.3-2.6-.7l.5-1.6z"/>'),
-        ("JavaScript", '<rect x="2" y="2" width="20" height="20" rx="3" fill="#F7DF1E"/><path fill="#000000" d="M10.8 16.9c0 1.6-.9 2.4-2.3 2.4-1 0-1.7-.5-2.1-1.2l1.3-.8c.2.4.5.6.9.6.5 0 .8-.2.8-1v-5.3h1.4v5.3zm2.6.2c.4.6.9 1 1.7 1 .7 0 1.2-.3 1.2-.8 0-.5-.4-.7-1.2-1.1l-.4-.2c-1.2-.5-2-1.1-2-2.4 0-1.2.9-2.1 2.4-2.1 1 0 1.8.4 2.3 1.3l-1.2.8c-.3-.5-.6-.7-1.1-.7-.5 0-.8.3-.8.7 0 .5.3.7 1.1 1l.4.2c1.4.6 2.2 1.2 2.2 2.5 0 1.4-1.1 2.2-2.6 2.2-1.5 0-2.4-.7-2.9-1.6l1.3-.8z"/>'),
-        ("Lua", '<circle cx="12" cy="12.5" r="8.5" fill="#2C2D72"/><circle cx="14.5" cy="9.5" r="2.2" fill="#ffffff"/><circle cx="19.5" cy="5" r="2" fill="#64D2FF"/>'),
-        ("PyTorch", '<path fill="#EE4C2C" d="M12 2.2L6.3 7.9a8 8 0 1 0 11.4 0l-1.8 1.8a5.5 5.5 0 1 1-7.8 0L12 5.8V2.2z"/><circle cx="15.5" cy="6.2" r="1.4" fill="#EE4C2C"/>'),
-        ("TensorFlow", '<path fill="#FF6F00" d="M12 2L3.5 6.8v3.6l5-2.8v11.6l3.5 2V7.8l5 2.8v3.6l3.5-2V6.8L12 2zm3.5 9.8v3.4l2.8-1.6v-3.4l-2.8 1.6z"/>'),
-        ("React", '<circle cx="12" cy="12" r="2.1" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="9.5" ry="3.7" stroke="#61DAFB" stroke-width="1.3" fill="none"/><ellipse cx="12" cy="12" rx="9.5" ry="3.7" transform="rotate(60 12 12)" stroke="#61DAFB" stroke-width="1.3" fill="none"/><ellipse cx="12" cy="12" rx="9.5" ry="3.7" transform="rotate(120 12 12)" stroke="#61DAFB" stroke-width="1.3" fill="none"/>'),
-        ("Next.js", '<circle cx="12" cy="12" r="9.5" fill="#000000" stroke="#ffffff" stroke-width="1.3"/><path d="M8.5 16V8l8.2 10.5M15.5 8v4.8" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>'),
-        ("Node.js", '<path fill="#539E43" d="M12 2l8.6 5v10L12 22l-8.6-5V7L12 2zm0 2.5L5.6 8.2v7.6L12 19.5l6.4-3.7V8.2L12 4.5z"/><path fill="#539E43" d="M12 8.2l3.8 2.2v3.2L12 15.8l-3.8-2.2v-3.2L12 8.2z"/>'),
-        ("Docker", '<path fill="#2496ED" d="M13 8h2v2h-2V8zm-3 0h2v2h-2V8zm0-3h2v2h-2V5zm-3 3h2v2H7V8zm-3 0h2v2H4V8zm3-3h2v2H7V5zm14.5 5.4c-.5-.4-1.6-.5-2.3-.3-.2-1.3-1-2.3-2-2.8l-.4-.2-.2.4c-.3.6-.4 1.5-.1 2.2.2.5.6.9 1 1.2H2.2l-.1.6c-.2 1.8.3 3.7 1.4 5 1.1 1.3 2.8 2 4.9 2 4.4 0 7.7-2 9.4-5.7.6 0 2-.1 2.7-1.3.1-.1.5-.8.2-1.1z"/>'),
-        ("Git", '<path fill="#F05032" d="M21.6 11.1L12.9 2.4a1.3 1.3 0 0 0-1.8 0L9.3 4.2l2.3 2.3a1.5 1.5 0 0 1 1.9 1.9l2.2 2.2a1.5 1.5 0 1 1-.9.9l-2.1-2.1v5.5a1.5 1.5 0 1 1-1.2 0V9.3a1.5 1.5 0 0 1-.8-2L8.4 5 2.4 11a1.3 1.3 0 0 0 0 1.8l8.7 8.7a1.3 1.3 0 0 0 1.8 0l8.7-8.7a1.3 1.3 0 0 0 0-1.7z"/>'),
-        ("Linux", '<circle cx="12" cy="10" r="5" fill="#FCC624"/><path fill="#111827" d="M9.5 10c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5v2.2c1.2 1 2 2.5 2 4.3 0 1.5-.8 2.5-2.2 2.5H9.7c-1.4 0-2.2-1-2.2-2.5 0-1.8.8-3.3 2-4.3V10z"/><circle cx="10.8" cy="9.5" r=".7" fill="#ffffff"/><circle cx="13.2" cy="9.5" r=".7" fill="#ffffff"/><path fill="#FCC624" d="M10.5 11.2h3L12 12.8z"/>'),
+        ("Python", "#3776AB", '<path fill="#3776AB" d="M11.9 2C7.3 2 7.6 4 7.6 4v2.1h4.4v.6H5.8S2.5 6.3 2.5 11s2.9 4.5 2.9 4.5h1.7v-2.2s-.1-2.9 2.8-2.9h4.6s2.6 0 2.6-2.5V4.4S17.5 2 11.9 2zm-2.5 1.4a.8.8 0 1 1 0 1.6.8.8 0 0 1 0-1.6z"/><path fill="#FFD43B" d="M12.1 22c4.6 0 4.3-2 4.3-2v-2.1H12v-.6h6.2s3.3.4 3.3-4.3-2.9-4.5-2.9-4.5h-1.7v2.2s.1 2.9-2.8 2.9H9.5s-2.6 0-2.6 2.5v3.5S6.5 22 12.1 22zm2.5-1.4a.8.8 0 1 1 0-1.6.8.8 0 0 1 0 1.6z"/>'),
+        ("TypeScript", "#3178C6", '<rect x="2" y="2" width="20" height="20" rx="4" fill="#3178C6"/><path fill="#ffffff" d="M13.5 12.6H11v6.9H9.1v-6.9H6.6V11h6.9v1.6zm1.1 5.1c.6.4 1.4.6 2.2.6.9 0 1.5-.3 1.5-.9 0-.5-.4-.8-1.4-1.2-1.5-.5-2.4-1.2-2.4-2.5 0-1.5 1.2-2.5 3.1-2.5.9 0 1.7.2 2.2.5l-.5 1.5c-.4-.2-1-.4-1.7-.4-.8 0-1.3.3-1.3.8 0 .5.4.8 1.5 1.2 1.6.6 2.3 1.3 2.3 2.6 0 1.5-1.1 2.6-3.4 2.6-1 0-2-.3-2.6-.7l.5-1.6z"/>'),
+        ("JavaScript", "#F7DF1E", '<rect x="2" y="2" width="20" height="20" rx="4" fill="#F7DF1E"/><path fill="#000000" d="M10.8 16.9c0 1.6-.9 2.4-2.3 2.4-1 0-1.7-.5-2.1-1.2l1.3-.8c.2.4.5.6.9.6.5 0 .8-.2.8-1v-5.3h1.4v5.3zm2.6.2c.4.6.9 1 1.7 1 .7 0 1.2-.3 1.2-.8 0-.5-.4-.7-1.2-1.1l-.4-.2c-1.2-.5-2-1.1-2-2.4 0-1.2.9-2.1 2.4-2.1 1 0 1.8.4 2.3 1.3l-1.2.8c-.3-.5-.6-.7-1.1-.7-.5 0-.8.3-.8.7 0 .5.3.7 1.1 1l.4.2c1.4.6 2.2 1.2 2.2 2.5 0 1.4-1.1 2.2-2.6 2.2-1.5 0-2.4-.7-2.9-1.6l1.3-.8z"/>'),
+        ("PyTorch", "#EE4C2C", '<path fill="#EE4C2C" d="M12 2.2L6.3 7.9a8 8 0 1 0 11.4 0l-1.8 1.8a5.5 5.5 0 1 1-7.8 0L12 5.8V2.2z"/><circle cx="15.5" cy="6.2" r="1.5" fill="#EE4C2C"/>'),
+        ("TensorFlow", "#FF6F00", '<path fill="#FF6F00" d="M12 2L3.5 6.8v3.6l5-2.8v11.6l3.5 2V7.8l5 2.8v3.6l3.5-2V6.8L12 2zm3.5 9.8v3.4l2.8-1.6v-3.4l-2.8 1.6z"/>'),
+        ("React", "#61DAFB", '<circle cx="12" cy="12" r="2.2" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="9.5" ry="3.7" stroke="#61DAFB" stroke-width="1.4" fill="none"/><ellipse cx="12" cy="12" rx="9.5" ry="3.7" transform="rotate(60 12 12)" stroke="#61DAFB" stroke-width="1.4" fill="none"/><ellipse cx="12" cy="12" rx="9.5" ry="3.7" transform="rotate(120 12 12)" stroke="#61DAFB" stroke-width="1.4" fill="none"/>'),
+        ("Next.js", "#FFFFFF", '<circle cx="12" cy="12" r="9.5" fill="#000000" stroke="#ffffff" stroke-width="1.4"/><path d="M8.5 16V8l8.2 10.5M15.5 8v4.8" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>'),
+        ("Node.js", "#539E43", '<path fill="#539E43" d="M12 2l8.6 5v10L12 22l-8.6-5V7L12 2zm0 2.5L5.6 8.2v7.6L12 19.5l6.4-3.7V8.2L12 4.5z"/><path fill="#539E43" d="M12 8.2l3.8 2.2v3.2L12 15.8l-3.8-2.2v-3.2L12 8.2z"/>'),
+        ("Docker", "#2496ED", '<path fill="#2496ED" d="M13 8h2v2h-2V8zm-3 0h2v2h-2V8zm0-3h2v2h-2V5zm-3 3h2v2H7V8zm-3 0h2v2H4V8zm3-3h2v2H7V5zm14.5 5.4c-.5-.4-1.6-.5-2.3-.3-.2-1.3-1-2.3-2-2.8l-.4-.2-.2.4c-.3.6-.4 1.5-.1 2.2.2.5.6.9 1 1.2H2.2l-.1.6c-.2 1.8.3 3.7 1.4 5 1.1 1.3 2.8 2 4.9 2 4.4 0 7.7-2 9.4-5.7.6 0 2-.1 2.7-1.3.1-.1.5-.8.2-1.1z"/>'),
+        ("Git", "#F05032", '<path fill="#F05032" d="M21.6 11.1L12.9 2.4a1.3 1.3 0 0 0-1.8 0L9.3 4.2l2.3 2.3a1.5 1.5 0 0 1 1.9 1.9l2.2 2.2a1.5 1.5 0 1 1-.9.9l-2.1-2.1v5.5a1.5 1.5 0 1 1-1.2 0V9.3a1.5 1.5 0 0 1-.8-2L8.4 5 2.4 11a1.3 1.3 0 0 0 0 1.8l8.7 8.7a1.3 1.3 0 0 0 1.8 0l8.7-8.7a1.3 1.3 0 0 0 0-1.7z"/>'),
     ]
-    tile_w, tile_h = 118, 74
-    gap_x, gap_y = 12, 12
-    sx = (w - (6 * tile_w + 5 * gap_x)) / 2
-    sy = 54
+    sq = 92
+    gap_x = 56
+    gap_y = 48
+    sx = (w - (5 * sq + 4 * gap_x)) / 2
+    sy = 68
 
+    defs_extra = []
     tile_svg = []
-    for i, (name, icon_paths) in enumerate(tiles):
-        r = i // 6
-        c = i % 6
-        tx = sx + c * (tile_w + gap_x)
-        ty = sy + r * (tile_h + gap_y)
-        op = "0.98" if c in (1, 2, 3, 4) else "0.72"
-        bg_op = "0.11" if c in (2, 3) else "0.06"
-        ix = tx + tile_w / 2 - 14
-        iy = ty + 11
+    for i, (name, tint, icon_paths) in enumerate(tiles):
+        r = i // 5
+        c = i % 5
+        tx = sx + c * (sq + gap_x)
+        ty = sy + r * (sq + gap_y)
+        ix = tx + (sq - 48) / 2
+        iy = ty + (sq - 48) / 2
+        uid = f"sq_{i}"
+        defs_extra.append(
+            f'<radialGradient id="{uid}" cx="50%" cy="55%" r="55%">'
+            f'<stop offset="0%" stop-color="{tint}" stop-opacity="0.16"/>'
+            f'<stop offset="100%" stop-color="#0a0a0c" stop-opacity="0"/>'
+            f'</radialGradient>'
+        )
         tile_svg.append(
-            f'<g opacity="{op}">'
-            f'<rect x="{tx:.1f}" y="{ty:.1f}" width="{tile_w}" height="{tile_h}" rx="16" fill="#ffffff" fill-opacity="{bg_op}" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1"/>'
-            f'<svg x="{ix:.1f}" y="{iy:.1f}" width="28" height="28" viewBox="0 0 24 24">{icon_paths}</svg>'
-            f'<text x="{tx + tile_w/2:.1f}" y="{ty + 57:.1f}" text-anchor="middle" font-family="{FONT_SANS}" font-size="11.5" font-weight="500" fill="#e5e5ea">{esc(name)}</text>'
+            f'<g>'
+            f'<rect x="{tx:.1f}" y="{ty:.1f}" width="{sq}" height="{sq}" rx="22" fill="#141417" stroke="url(#sqRim)" stroke-width="1.2"/>'
+            f'<rect x="{tx:.1f}" y="{ty:.1f}" width="{sq}" height="{sq}" rx="22" fill="url(#{uid})"/>'
+            f'<line x1="{tx+18:.1f}" y1="{ty+1:.1f}" x2="{tx+sq-18:.1f}" y2="{ty+1:.1f}" stroke="#ffffff" stroke-opacity="0.32" stroke-width="0.9"/>'
+            f'<svg x="{ix:.1f}" y="{iy:.1f}" width="48" height="48" viewBox="0 0 24 24">{icon_paths}</svg>'
+            f'<text x="{tx + sq/2:.1f}" y="{ty + sq + 22:.1f}" text-anchor="middle" font-family="{FONT_SANS}" font-size="13" font-weight="500" fill="#d1d1d6">{esc(name)}</text>'
             f'</g>'
         )
 
     return f"""<svg fill="none" viewBox="0 0 {w} {h}" width="100%" xmlns="http://www.w3.org/2000/svg">
   {COMMON_DEFS}
-  <rect x="1" y="1" width="{w-2}" height="{h-2}" rx="26" fill="#050507" stroke="url(#cardRim)" stroke-width="1.1"/>
-  <rect x="1" y="1" width="{w-2}" height="{h-2}" rx="26" fill="url(#stackSpot)"/>
-  <line x1="28" y1="2" x2="{w-28}" y2="2" stroke="#ffffff" stroke-opacity="0.24" stroke-width="0.9"/>
-  <text x="36" y="34" font-family="{FONT_SANS}" font-size="12" font-weight="600" letter-spacing="0.8" fill="#8e8e93">CORE STACK</text>
-  <text x="804" y="34" text-anchor="end" font-family="{FONT_SANS}" font-size="12" fill="#636366">AI, Systems &amp; Web</text>
+  <defs>
+    <linearGradient id="sqRim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.22"/>
+    </linearGradient>
+    {''.join(defs_extra)}
+  </defs>
+  <rect x="1" y="1" width="{w-2}" height="{h-2}" rx="28" fill="#050507" stroke="url(#cardRim)" stroke-width="1.1"/>
+  <line x1="28" y1="2" x2="{w-28}" y2="2" stroke="#ffffff" stroke-opacity="0.22" stroke-width="0.9"/>
+  <text x="{w/2}" y="42" text-anchor="middle" font-family="{FONT_SANS}" font-size="22" font-weight="600" letter-spacing="-0.4" fill="#f5f5f7">Core Stack</text>
   {''.join(tile_svg)}
 </svg>
 """
@@ -523,7 +536,7 @@ def main():
         "widget-commits-mesh.svg": build_counter_widget(m),
         "widget-rings.svg": build_rings_widget(m),
         "widget-telemetry.svg": build_telemetry_row(m),
-        "widget-core-stack.svg": build_stack_spotlight(),
+        "widget-creator-stack.svg": build_stack_spotlight(),
         "link-elera.svg": build_link_pill("Elera AI", "#ff5e3a", "#ffd166"),
         "link-linkedin.svg": build_link_pill("LinkedIn", "#0a84ff", "#bf5af2"),
         "link-x.svg": build_link_pill("X  @NightEdge707", "#30d158", "#64d2ff"),
