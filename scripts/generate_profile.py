@@ -339,31 +339,42 @@ def build_telemetry_row(m: dict) -> str:
 
 
 def build_stack_spotlight() -> str:
-    # Inspired by Image 6: Dark frosted tile grid with central blue/indigo spotlight
-    w, h = 840, 194
+    # Inspired by Image 6: Dark frosted tile grid with central blue/indigo spotlight & real brand logos
+    w, h = 840, 232
     tiles = [
-        ("Python", "#3b82f6"), ("TypeScript", "#0a84ff"), ("JavaScript", "#ffd60a"), ("Lua", "#5e5ce6"), ("PyTorch", "#ff5e3a"), ("TensorFlow", "#ff9f0a"),
-        ("React", "#64d2ff"), ("Next.js", "#f5f5f7"), ("Node.js", "#30d158"), ("Docker", "#0a84ff"), ("Git", "#ff453a"), ("Linux", "#ffd60a"),
+        ("Python", '<path fill="#3776AB" d="M11.9 2C7.3 2 7.6 4 7.6 4v2.1h4.4v.6H5.8S2.5 6.3 2.5 11s2.9 4.5 2.9 4.5h1.7v-2.2s-.1-2.9 2.8-2.9h4.6s2.6 0 2.6-2.5V4.4S17.5 2 11.9 2zm-2.5 1.4a.8.8 0 1 1 0 1.6.8.8 0 0 1 0-1.6z"/><path fill="#FFD43B" d="M12.1 22c4.6 0 4.3-2 4.3-2v-2.1H12v-.6h6.2s3.3.4 3.3-4.3-2.9-4.5-2.9-4.5h-1.7v2.2s.1 2.9-2.8 2.9H9.5s-2.6 0-2.6 2.5v3.5S6.5 22 12.1 22zm2.5-1.4a.8.8 0 1 1 0-1.6.8.8 0 0 1 0 1.6z"/>'),
+        ("TypeScript", '<rect x="2" y="2" width="20" height="20" rx="3" fill="#3178C6"/><path fill="#ffffff" d="M13.5 12.6H11v6.9H9.1v-6.9H6.6V11h6.9v1.6zm1.1 5.1c.6.4 1.4.6 2.2.6.9 0 1.5-.3 1.5-.9 0-.5-.4-.8-1.4-1.2-1.5-.5-2.4-1.2-2.4-2.5 0-1.5 1.2-2.5 3.1-2.5.9 0 1.7.2 2.2.5l-.5 1.5c-.4-.2-1-.4-1.7-.4-.8 0-1.3.3-1.3.8 0 .5.4.8 1.5 1.2 1.6.6 2.3 1.3 2.3 2.6 0 1.5-1.1 2.6-3.4 2.6-1 0-2-.3-2.6-.7l.5-1.6z"/>'),
+        ("JavaScript", '<rect x="2" y="2" width="20" height="20" rx="3" fill="#F7DF1E"/><path fill="#000000" d="M10.8 16.9c0 1.6-.9 2.4-2.3 2.4-1 0-1.7-.5-2.1-1.2l1.3-.8c.2.4.5.6.9.6.5 0 .8-.2.8-1v-5.3h1.4v5.3zm2.6.2c.4.6.9 1 1.7 1 .7 0 1.2-.3 1.2-.8 0-.5-.4-.7-1.2-1.1l-.4-.2c-1.2-.5-2-1.1-2-2.4 0-1.2.9-2.1 2.4-2.1 1 0 1.8.4 2.3 1.3l-1.2.8c-.3-.5-.6-.7-1.1-.7-.5 0-.8.3-.8.7 0 .5.3.7 1.1 1l.4.2c1.4.6 2.2 1.2 2.2 2.5 0 1.4-1.1 2.2-2.6 2.2-1.5 0-2.4-.7-2.9-1.6l1.3-.8z"/>'),
+        ("Lua", '<circle cx="12" cy="12.5" r="8.5" fill="#2C2D72"/><circle cx="14.5" cy="9.5" r="2.2" fill="#ffffff"/><circle cx="19.5" cy="5" r="2" fill="#64D2FF"/>'),
+        ("PyTorch", '<path fill="#EE4C2C" d="M12 2.2L6.3 7.9a8 8 0 1 0 11.4 0l-1.8 1.8a5.5 5.5 0 1 1-7.8 0L12 5.8V2.2z"/><circle cx="15.5" cy="6.2" r="1.4" fill="#EE4C2C"/>'),
+        ("TensorFlow", '<path fill="#FF6F00" d="M12 2L3.5 6.8v3.6l5-2.8v11.6l3.5 2V7.8l5 2.8v3.6l3.5-2V6.8L12 2zm3.5 9.8v3.4l2.8-1.6v-3.4l-2.8 1.6z"/>'),
+        ("React", '<circle cx="12" cy="12" r="2.1" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="9.5" ry="3.7" stroke="#61DAFB" stroke-width="1.3" fill="none"/><ellipse cx="12" cy="12" rx="9.5" ry="3.7" transform="rotate(60 12 12)" stroke="#61DAFB" stroke-width="1.3" fill="none"/><ellipse cx="12" cy="12" rx="9.5" ry="3.7" transform="rotate(120 12 12)" stroke="#61DAFB" stroke-width="1.3" fill="none"/>'),
+        ("Next.js", '<circle cx="12" cy="12" r="9.5" fill="#000000" stroke="#ffffff" stroke-width="1.3"/><path d="M8.5 16V8l8.2 10.5M15.5 8v4.8" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>'),
+        ("Node.js", '<path fill="#539E43" d="M12 2l8.6 5v10L12 22l-8.6-5V7L12 2zm0 2.5L5.6 8.2v7.6L12 19.5l6.4-3.7V8.2L12 4.5z"/><path fill="#539E43" d="M12 8.2l3.8 2.2v3.2L12 15.8l-3.8-2.2v-3.2L12 8.2z"/>'),
+        ("Docker", '<path fill="#2496ED" d="M13 8h2v2h-2V8zm-3 0h2v2h-2V8zm0-3h2v2h-2V5zm-3 3h2v2H7V8zm-3 0h2v2H4V8zm3-3h2v2H7V5zm14.5 5.4c-.5-.4-1.6-.5-2.3-.3-.2-1.3-1-2.3-2-2.8l-.4-.2-.2.4c-.3.6-.4 1.5-.1 2.2.2.5.6.9 1 1.2H2.2l-.1.6c-.2 1.8.3 3.7 1.4 5 1.1 1.3 2.8 2 4.9 2 4.4 0 7.7-2 9.4-5.7.6 0 2-.1 2.7-1.3.1-.1.5-.8.2-1.1z"/>'),
+        ("Git", '<path fill="#F05032" d="M21.6 11.1L12.9 2.4a1.3 1.3 0 0 0-1.8 0L9.3 4.2l2.3 2.3a1.5 1.5 0 0 1 1.9 1.9l2.2 2.2a1.5 1.5 0 1 1-.9.9l-2.1-2.1v5.5a1.5 1.5 0 1 1-1.2 0V9.3a1.5 1.5 0 0 1-.8-2L8.4 5 2.4 11a1.3 1.3 0 0 0 0 1.8l8.7 8.7a1.3 1.3 0 0 0 1.8 0l8.7-8.7a1.3 1.3 0 0 0 0-1.7z"/>'),
+        ("Linux", '<circle cx="12" cy="10" r="5" fill="#FCC624"/><path fill="#111827" d="M9.5 10c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5v2.2c1.2 1 2 2.5 2 4.3 0 1.5-.8 2.5-2.2 2.5H9.7c-1.4 0-2.2-1-2.2-2.5 0-1.8.8-3.3 2-4.3V10z"/><circle cx="10.8" cy="9.5" r=".7" fill="#ffffff"/><circle cx="13.2" cy="9.5" r=".7" fill="#ffffff"/><path fill="#FCC624" d="M10.5 11.2h3L12 12.8z"/>'),
     ]
-    tile_w, tile_h = 118, 56
+    tile_w, tile_h = 118, 74
     gap_x, gap_y = 12, 12
     sx = (w - (6 * tile_w + 5 * gap_x)) / 2
     sy = 54
 
     tile_svg = []
-    for i, (name, col) in enumerate(tiles):
+    for i, (name, icon_paths) in enumerate(tiles):
         r = i // 6
         c = i % 6
         tx = sx + c * (tile_w + gap_x)
         ty = sy + r * (tile_h + gap_y)
-        # Center tiles brighter, edge tiles subtly dimmer like Image 6
-        op = "0.95" if c in (1, 2, 3, 4) else "0.65"
-        bg_op = "0.10" if c in (2, 3) else "0.05"
+        op = "0.98" if c in (1, 2, 3, 4) else "0.72"
+        bg_op = "0.11" if c in (2, 3) else "0.06"
+        ix = tx + tile_w / 2 - 14
+        iy = ty + 11
         tile_svg.append(
             f'<g opacity="{op}">'
-            f'<rect x="{tx:.1f}" y="{ty:.1f}" width="{tile_w}" height="{tile_h}" rx="14" fill="#ffffff" fill-opacity="{bg_op}" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/>'
-            f'<circle cx="{tx + 20:.1f}" cy="{ty + 28:.1f}" r="5" fill="{col}"/>'
-            f'<text x="{tx + 33:.1f}" y="{ty + 32.5:.1f}" font-family="{FONT_SANS}" font-size="13" font-weight="500" fill="#f5f5f7">{esc(name)}</text>'
+            f'<rect x="{tx:.1f}" y="{ty:.1f}" width="{tile_w}" height="{tile_h}" rx="16" fill="#ffffff" fill-opacity="{bg_op}" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1"/>'
+            f'<svg x="{ix:.1f}" y="{iy:.1f}" width="28" height="28" viewBox="0 0 24 24">{icon_paths}</svg>'
+            f'<text x="{tx + tile_w/2:.1f}" y="{ty + 57:.1f}" text-anchor="middle" font-family="{FONT_SANS}" font-size="11.5" font-weight="500" fill="#e5e5ea">{esc(name)}</text>'
             f'</g>'
         )
 
