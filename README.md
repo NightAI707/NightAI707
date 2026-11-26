@@ -1,122 +1,102 @@
-<!-- Banner -->
-<a href="https://github.com/NightAI707">
-  <img src="./assets/banner.png" alt="Night Edge" style="width:100%; height:auto" />
-</a>
+<p align="center">
+  <img src="./assets/ascihand-removebg-preview.png" alt="Banner" width="100%">
+</p>
 
-<div align="center">
+<h1 align="center">Hi 👋, Imma Night</h1>
 
+<h3 align="center">AI Engineer &amp; Builder</h3>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1200&color=C9D1D9&center=true&vCenter=true&width=700&height=60&lines=+%3E+Building+Elera+AI;%3E+Shipping+Intelligent+Systems;+%3E+If+It+Trains%2C+It+Ships;Just+Build" alt="Typing SVG" />
+</p>
+
+<p align="center">
+Building AI-powered creative tools and intelligent systems with clean engineering.
+</p>
+
+
+##  <h2 align="center">🚀 About Me </h2>
+
+<img align="right" src="./assets/astro-removebg-preview.png" width="280" alt="Developer Illustration"/>
+
+**Night**, Here - a student at IIT Patna and independent builder focused on AI engineering and software.
+
+I'm currently building **Elera AI**, an AI-powered creative editing platform, while exploring generative AI, intelligent systems, and AI-native computing.
+
+Previously, I've built **AI products, Roblox experiences, and research projects** across **Python, JavaScript, TypeScript, and Lua**, alongside exploring open-source development and cybersecurity.
+
+My goal is simple: write clean code, ship real AI products, and build systems that last.
+
+<br clear="right"/>
+
+ <h2 align="center">🤝 Connect</h2>
+
+<p align="center">
   <a href="https://github.com/NightAI707">
-    <img width="120px"
-        alt="Stars"
-        title="Profile Stars"
-        src="https://custom-icon-badges.demolab.com/badge/dynamic/json?logo=star&color=000000&labelColor=00E5FF&logoColor=000000&label=Stars&style=for-the-badge&query=%24.stars&url=https://api.github-star-counter.workers.dev/user/NightAI707" />&nbsp;
+    <img src="https://skillicons.dev/icons?i=github" height="45" />
   </a>
-  <a href="https://github.com/NightAI707/NightAI707">
-    <img width="114px"
-        alt="Forks"
-        title="Repository Forks"
-        src="https://custom-icon-badges.demolab.com/github/forks/NightAI707/NightAI707?color=000000&logo=fork&style=for-the-badge&logoColor=000000&labelColor=00E5FF" />&nbsp;
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/night-edge-667aa32b4/">
+    <img src="https://skillicons.dev/icons?i=linkedin" height="45" />
   </a>
-  <a href="https://github.com/NightAI707?tab=followers">
-    <img width="150px"
-        alt="Followers"
-        title="GitHub Followers"
-        src="https://custom-icon-badges.demolab.com/github/followers/NightAI707?color=000000&labelColor=00E5FF&style=for-the-badge&logo=person-add&label=Followers&logoColor=000000" />
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://x.com/NightEdge707">
+    <img src="https://skillicons.dev/icons?i=twitter" height="45" />
   </a>
-</div>
+</p>
 
-<br/>
+<h2 align="center">💻 Tech Stack</h2>
 
-<!-- Who Am I? -->
-<img src="./assets/emblem.jpg" width="340" align="left" />
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,js,ts,lua,react,nextjs,nodejs,docker,git,github,vscode,html" />
+</p>
+
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" height="48" alt="NumPy" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" height="48" alt="Pandas" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" height="48" alt="OpenCV" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" height="48" alt="TensorFlow" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" height="48" alt="PyTorch" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" height="48" alt="Jupyter" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" height="48" alt="Google Cloud" />
+</p>
+
+<h2 align="center">📊 GitHub Stats</h2>
+
 <div align="center">
 
-**Who Am I?**
-</div>
-
-<div align="justify">
-
-I am **Night Edge**, a student at `IIT Patna` and an independent builder working on **AI**, software engineering, and emerging tech. Right now I am building **Elera AI**, an AI-powered creative editing platform, and spending most of my time shipping products rather than just talking about them.
-
-Before Elera, I built **AI tools**, **Roblox experiences**, and **research prototypes** across `Python`, `JavaScript`, `TypeScript`, and `Lua`. I care about software that feels sharp, fast, and intentional, where clean engineering meets visual design.
-
-Outside my main builds, I dig into **generative AI**, **intelligent systems**, **cybersecurity**, and **open-source software**, always picking up whatever new stack or paper helps me build the next thing better.
+<img src="https://streak-stats.demolab.com?user=NightAI707&theme=city_lights&hide_border=false&border_radius=5" height="150"/>
 
 </div>
 
-<br/>
-<br/>
+<h2 align="center">📈 Activity Graph</h2>
 
-<!-- Social Badges -->
-<div align="center">
-  <strong>You can Click here</strong>
-  <br/>
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=NightAI707&bg_color=1F242C&color=E6EDF3&line=3B82F6&point=58A6FF&area=true&hide_border=true&radius=16" alt="Activity Graph"/>
+</p>
 
-  <a href="https://www.linkedin.com/in/night-edge-667aa32b4/" target="_blank">
-    <img width="124px"
-          src="https://img.shields.io/badge/LinkedIn-00E5FF?style=for-the-badge&logo=linkedin&logoColor=000000"
-          alt="LinkedIn"
-          title="My LinkedIn" />
-  </a>
-  <a href="https://x.com/NightEdge707" target="_blank">
-    <img width="96px"
-          src="https://img.shields.io/badge/X-00E5FF?style=for-the-badge&logo=x&logoColor=000000"
-          alt="X"
-          title="My X" />
-  </a>
-  <a href="https://github.com/NightAI707" target="_blank">
-    <img width="118px"
-          src="https://img.shields.io/badge/GitHub-00E5FF?style=for-the-badge&logo=github&logoColor=000000"
-          alt="GitHub"
-          title="My GitHub" />
-  </a>
+### 
+<h2 align="center">⌘ Commit Activity</h2>
 
-</div>
-<br/>
+<picture>
+  <source media="(prefers-color-scheme: dark)"
+    srcset="https://raw.githubusercontent.com/NightAI707/NightAI707/output/pacman-contribution-graph-dark.svg">
 
-<img src="./assets/glass-icon.jpg" width="106" align="right" />
+  <source media="(prefers-color-scheme: light)"
+    srcset="https://raw.githubusercontent.com/NightAI707/NightAI707/output/pacman-contribution-graph.svg">
 
-> [!Caution]
->
-> Code is never finished, it only gets **better**.
->
-> What you see here is built with **practice**, **curiosity**, and **persistence**.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/NightAI707/NightAI707/output/pacman-contribution-graph-dark.svg">
+</p>
 
-<br/>
+<h2 align="center">⌘ Philosophy</h2>
 
-<!-- My Contributions Title -->
-<div align="center">
-  <img src="./assets/contributions-title.svg" width="50%" />
-  <br/>
-  <br/>
-</div>
-
-<a href="https://github.com/NightAI707">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=NightAI707&custom_title=My%20Contributions&hide_border=false&theme=high-contrast&border_color=00E5FF&bg_color=000000&radius=16&area_color=00E5FF&area=true&point=ffffff&line=00E5FF&days=14&text_color=ffffff&title_color=ffffff&include_all_commits=true&count_private=true" width="100%" />
-</a>
-
-<br/>
-
-<table align="center">
-  <tr>
-    <!-- Skills Left -->
-    <td valign="top" width="45%">
-      <img src="./assets/stack-title.svg" width="100%" />
-      <br/>
-      <br/>
-      <img src="https://skillicons.dev/icons?i=py,js,ts,lua,html,css&theme=dark" /><br>
-      <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,react,nextjs,nodejs,tailwind&theme=dark" /><br>
-      <img src="https://skillicons.dev/icons?i=git,github,docker,linux,vscode,figma&theme=dark" /><br>
-    </td>
-    <!-- Project + Streak Right -->
-    <td valign="top" width="55%">
-      <a href="https://github.com/NightAI707">
-        <img src="./assets/elera-glass-card.svg" width="100%" />
-      </a>
-      <br/>
-      <a href="https://git.io/streak-stats">
-        <img src="https://streak-stats.demolab.com?user=NightAI707&theme=dark&background=000000&border=00E5FF&ring=00E5FF&fire=00E5FF&currStreakNum=FFFFFF&card_width=430&sideNums=FFFFFF&currStreakLabel=00E5FF&sideLabels=00E5FF&dates=FFFFFF&border_radius=18" width="100%" />
-      </a>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Developer Quote"/>
+</p>
