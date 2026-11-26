@@ -449,7 +449,7 @@ def main():
         "widget-counter.svg": build_counter_widget(m),
         "widget-rings.svg": build_rings_widget(m),
         "widget-telemetry.svg": build_telemetry_row(m),
-        "widget-stack.svg": build_stack_spotlight(),
+        "widget-core-stack.svg": build_stack_spotlight(),
         "link-elera.svg": build_link_pill("Elera AI", "#ff5e3a", "#ffd166"),
         "link-linkedin.svg": build_link_pill("LinkedIn", "#0a84ff", "#bf5af2"),
         "link-x.svg": build_link_pill("X  @NightEdge707", "#30d158", "#64d2ff"),
