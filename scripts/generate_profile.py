@@ -379,20 +379,47 @@ def build_stack_spotlight() -> str:
 """
 
 
-def build_link_pill(title: str, sub: str, bg1: str, bg2: str) -> str:
-    w, h = 272, 68
+def build_link_pill(title: str, c_left: str, c_right: str) -> str:
+    w, h = 274, 68
+    r = h / 2
+    uid = "".join(ch for ch in title.lower() if ch.isalnum())
     return f"""<svg fill="none" viewBox="0 0 {w} {h}" width="100%" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="{bg1}"/>
-      <stop offset="100%" stop-color="{bg2}"/>
+    <clipPath id="clip_{uid}">
+      <rect x="1.5" y="1.5" width="{w-3}" height="{h-3}" rx="{r-1.5}"/>
+    </clipPath>
+    <radialGradient id="gl_{uid}" cx="18%" cy="85%" r="55%">
+      <stop offset="0%" stop-color="{c_left}" stop-opacity="0.88"/>
+      <stop offset="55%" stop-color="{c_left}" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gr_{uid}" cx="85%" cy="88%" r="52%">
+      <stop offset="0%" stop-color="{c_right}" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="{c_right}" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rim_{uid}" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="75%" stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.72"/>
     </linearGradient>
+    <filter id="blur_{uid}" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
   </defs>
-  <rect x="1" y="1" width="{w-2}" height="{h-2}" rx="20" fill="url(#lg)" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
-  <line x1="20" y1="2" x2="{w-20}" y2="2" stroke="#ffffff" stroke-opacity="0.42" stroke-width="0.9"/>
-  <text x="22" y="31" font-family="{FONT_SANS}" font-size="16" font-weight="700" fill="#ffffff">{esc(title)}</text>
-  <text x="22" y="50" font-family="{FONT_SANS}" font-size="12" font-weight="500" fill="#ffffff" fill-opacity="0.80">{esc(sub)}</text>
-  <path d="M{w-30} 24 H{w-20} V34 M{w-20} 24 L{w-31} 35" stroke="#ffffff" stroke-opacity="0.9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <g clip-path="url(#clip_{uid})">
+    <rect width="{w}" height="{h}" fill="#08080a"/>
+    <ellipse cx="48" cy="58" rx="95" ry="42" fill="url(#gl_{uid})" filter="url(#blur_{uid})"/>
+    <ellipse cx="{w-42}" cy="58" rx="88" ry="40" fill="url(#gr_{uid})" filter="url(#blur_{uid})"/>
+    <!-- Subtle inner glass sheen -->
+    <ellipse cx="{w/2}" cy="10" rx="{w*0.42}" ry="14" fill="#ffffff" fill-opacity="0.06"/>
+  </g>
+  <rect x="1.5" y="1.5" width="{w-3}" height="{h-3}" rx="{r-1.5}" fill="none" stroke="url(#rim_{uid})" stroke-width="1.3"/>
+  <text x="28" y="39.5" font-family="{FONT_SANS}" font-size="17" font-weight="500" letter-spacing="-0.2" fill="#f5f5f7">{esc(title)}</text>
+  <!-- White Circle + Arrow -->
+  <circle cx="{w-34}" cy="{h/2}" r="21" fill="#ffffff"/>
+  <path d="M{w-42} {h/2} H{w-26} M{w-32} {h/2-6} L{w-26} {h/2} L{w-32} {h/2+6}" stroke="{c_right}" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 """
 
@@ -410,9 +437,9 @@ def main():
         "widget-rings.svg": build_rings_widget(m),
         "widget-telemetry.svg": build_telemetry_row(m),
         "widget-stack.svg": build_stack_spotlight(),
-        "link-elera.svg": build_link_pill("Elera AI", "elera-ai", "#ff5e3a", "#e63946"),
-        "link-linkedin.svg": build_link_pill("LinkedIn", "Night Edge", "#0a84ff", "#0055d4"),
-        "link-x.svg": build_link_pill("X", "@NightEdge707", "#1c1c1e", "#0a0a0c"),
+        "link-elera.svg": build_link_pill("Elera AI", "#ff5e3a", "#ffd166"),
+        "link-linkedin.svg": build_link_pill("LinkedIn", "#0a84ff", "#bf5af2"),
+        "link-x.svg": build_link_pill("X  @NightEdge707", "#30d158", "#64d2ff"),
     }
 
     for fname, svg in outputs.items():

@@ -22,24 +22,16 @@
 
 <img src="./assets/widget-stack.svg" alt="Core Stack" width="100%" />
 
-<table width="100%">
-  <tr>
-    <td width="33.3%" align="center">
-      <a href="https://github.com/NightAI707">
-        <img src="./assets/link-elera.svg" alt="Elera AI" width="100%" />
-      </a>
-    </td>
-    <td width="33.3%" align="center">
-      <a href="https://www.linkedin.com/in/night-edge-667aa32b4/">
-        <img src="./assets/link-linkedin.svg" alt="LinkedIn" width="100%" />
-      </a>
-    </td>
-    <td width="33.3%" align="center">
-      <a href="https://x.com/NightEdge707">
-        <img src="./assets/link-x.svg" alt="X" width="100%" />
-      </a>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://github.com/NightAI707">
+    <img src="./assets/link-elera.svg" alt="Elera AI" width="32%" />
+  </a>
+  <a href="https://www.linkedin.com/in/night-edge-667aa32b4/">
+    <img src="./assets/link-linkedin.svg" alt="LinkedIn" width="32%" />
+  </a>
+  <a href="https://x.com/NightEdge707">
+    <img src="./assets/link-x.svg" alt="X" width="32%" />
+  </a>
+</p>
 
 </div>

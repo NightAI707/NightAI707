@@ -1,13 +1,38 @@
-<svg fill="none" viewBox="0 0 272 68" width="100%" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 274 68" width="100%" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff5e3a"/>
-      <stop offset="100%" stop-color="#e63946"/>
+    <clipPath id="clip_eleraai">
+      <rect x="1.5" y="1.5" width="271" height="65" rx="32.5"/>
+    </clipPath>
+    <radialGradient id="gl_eleraai" cx="18%" cy="85%" r="55%">
+      <stop offset="0%" stop-color="#ff5e3a" stop-opacity="0.88"/>
+      <stop offset="55%" stop-color="#ff5e3a" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gr_eleraai" cx="85%" cy="88%" r="52%">
+      <stop offset="0%" stop-color="#ffd166" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="#ffd166" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rim_eleraai" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="75%" stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.72"/>
     </linearGradient>
+    <filter id="blur_eleraai" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
   </defs>
-  <rect x="1" y="1" width="270" height="66" rx="20" fill="url(#lg)" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
-  <line x1="20" y1="2" x2="252" y2="2" stroke="#ffffff" stroke-opacity="0.42" stroke-width="0.9"/>
-  <text x="22" y="31" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif" font-size="16" font-weight="700" fill="#ffffff">Elera AI</text>
-  <text x="22" y="50" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif" font-size="12" font-weight="500" fill="#ffffff" fill-opacity="0.80">elera-ai</text>
-  <path d="M242 24 H252 V34 M252 24 L241 35" stroke="#ffffff" stroke-opacity="0.9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <g clip-path="url(#clip_eleraai)">
+    <rect width="274" height="68" fill="#08080a"/>
+    <ellipse cx="48" cy="58" rx="95" ry="42" fill="url(#gl_eleraai)" filter="url(#blur_eleraai)"/>
+    <ellipse cx="232" cy="58" rx="88" ry="40" fill="url(#gr_eleraai)" filter="url(#blur_eleraai)"/>
+    <!-- Subtle inner glass sheen -->
+    <ellipse cx="137.0" cy="10" rx="115.08" ry="14" fill="#ffffff" fill-opacity="0.06"/>
+  </g>
+  <rect x="1.5" y="1.5" width="271" height="65" rx="32.5" fill="none" stroke="url(#rim_eleraai)" stroke-width="1.3"/>
+  <text x="28" y="39.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif" font-size="17" font-weight="500" letter-spacing="-0.2" fill="#f5f5f7">Elera AI</text>
+  <!-- White Circle + Arrow -->
+  <circle cx="240" cy="34.0" r="21" fill="#ffffff"/>
+  <path d="M232 34.0 H248 M242 28.0 L248 34.0 L242 40.0" stroke="#ffd166" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
