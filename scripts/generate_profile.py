@@ -380,7 +380,7 @@ def build_stack_spotlight() -> str:
 
 
 def build_link_pill(title: str, c_left: str, c_right: str) -> str:
-    w, h = 274, 68
+    w, h = 274, 72
     r = h / 2
     uid = "".join(ch for ch in title.lower() if ch.isalnum())
     return f"""<svg fill="none" viewBox="0 0 {w} {h}" width="100%" xmlns="http://www.w3.org/2000/svg">
@@ -388,38 +388,40 @@ def build_link_pill(title: str, c_left: str, c_right: str) -> str:
     <clipPath id="clip_{uid}">
       <rect x="1.5" y="1.5" width="{w-3}" height="{h-3}" rx="{r-1.5}"/>
     </clipPath>
-    <radialGradient id="gl_{uid}" cx="18%" cy="85%" r="55%">
-      <stop offset="0%" stop-color="{c_left}" stop-opacity="0.88"/>
-      <stop offset="55%" stop-color="{c_left}" stop-opacity="0.28"/>
-      <stop offset="100%" stop-color="#050507" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="gr_{uid}" cx="85%" cy="88%" r="52%">
-      <stop offset="0%" stop-color="{c_right}" stop-opacity="0.85"/>
-      <stop offset="55%" stop-color="{c_right}" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#050507" stop-opacity="0"/>
+    <linearGradient id="horiz_{uid}" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="{c_left}"/>
+      <stop offset="50%" stop-color="{c_left}" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="{c_right}"/>
+    </linearGradient>
+    <linearGradient id="vertFade_{uid}" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050507" stop-opacity="0.96"/>
+      <stop offset="38%" stop-color="#050507" stop-opacity="0.72"/>
+      <stop offset="78%" stop-color="#050507" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.22"/>
+    </linearGradient>
+    <radialGradient id="btmGlow_{uid}" cx="50%" cy="105%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.48"/>
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="rim_{uid}" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45"/>
-      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.12"/>
-      <stop offset="75%" stop-color="#ffffff" stop-opacity="0.28"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.72"/>
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="75%" stop-color="#ffffff" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.92"/>
     </linearGradient>
-    <filter id="blur_{uid}" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8"/>
-    </filter>
   </defs>
   <g clip-path="url(#clip_{uid})">
-    <rect width="{w}" height="{h}" fill="#08080a"/>
-    <ellipse cx="48" cy="58" rx="95" ry="42" fill="url(#gl_{uid})" filter="url(#blur_{uid})"/>
-    <ellipse cx="{w-42}" cy="58" rx="88" ry="40" fill="url(#gr_{uid})" filter="url(#blur_{uid})"/>
-    <!-- Subtle inner glass sheen -->
-    <ellipse cx="{w/2}" cy="10" rx="{w*0.42}" ry="14" fill="#ffffff" fill-opacity="0.06"/>
+    <rect width="{w}" height="{h}" fill="#050507"/>
+    <rect width="{w}" height="{h}" fill="url(#horiz_{uid})"/>
+    <rect width="{w}" height="{h}" fill="url(#vertFade_{uid})"/>
+    <rect width="{w}" height="{h}" fill="url(#btmGlow_{uid})"/>
   </g>
-  <rect x="1.5" y="1.5" width="{w-3}" height="{h-3}" rx="{r-1.5}" fill="none" stroke="url(#rim_{uid})" stroke-width="1.3"/>
-  <text x="28" y="39.5" font-family="{FONT_SANS}" font-size="17" font-weight="500" letter-spacing="-0.2" fill="#f5f5f7">{esc(title)}</text>
+  <rect x="1.5" y="1.5" width="{w-3}" height="{h-3}" rx="{r-1.5}" fill="none" stroke="url(#rim_{uid})" stroke-width="1.5"/>
+  <text x="28" y="42" font-family="{FONT_SANS}" font-size="17" font-weight="500" letter-spacing="-0.2" fill="#f5f5f7">{esc(title)}</text>
   <!-- White Circle + Arrow -->
-  <circle cx="{w-34}" cy="{h/2}" r="21" fill="#ffffff"/>
-  <path d="M{w-42} {h/2} H{w-26} M{w-32} {h/2-6} L{w-26} {h/2} L{w-32} {h/2+6}" stroke="{c_right}" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="{w-36}" cy="{h/2}" r="22" fill="#ffffff"/>
+  <path d="M{w-44} {h/2} H{w-28} M{w-34} {h/2-6} L{w-28} {h/2} L{w-34} {h/2+6}" stroke="{c_right}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 """
 
