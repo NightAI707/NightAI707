@@ -20,7 +20,7 @@
 
 <img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/widget-telemetry.svg?v=4" alt="Monthly Output & Contribution Pulse" width="100%" />
 
-<img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/widget-stack.svg?v=6" alt="Core Stack" width="100%" />
+<img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/widget-stack.svg?v=7" alt="Core Stack" width="100%" />
 
 <p align="center">
   <a href="https://github.com/NightAI707"><img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/link-elera.svg?v=5" alt="Elera AI" width="32%" /></a>
