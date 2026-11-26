@@ -470,7 +470,8 @@ def build_stack_spotlight() -> str:
     {''.join(defs_extra)}
   </defs>
   <rect x="1" y="1" width="{w-2}" height="{h-2}" rx="28" fill="#050507" stroke="url(#cardRim)" stroke-width="1.1"/>
-  <line x1="28" y1="2" x2="{w-28}" y2="2" stroke="#ffffff" stroke-opacity="0.22" stroke-width="0.9"/>
+  <rect x="1" y="1" width="{w-2}" height="{h-2}" rx="28" fill="url(#stackSpot)"/>
+  <line x1="28" y1="2" x2="{w-28}" y2="2" stroke="#ffffff" stroke-opacity="0.24" stroke-width="0.9"/>
   <text x="{w/2}" y="42" text-anchor="middle" font-family="{FONT_SANS}" font-size="22" font-weight="600" letter-spacing="-0.4" fill="#f5f5f7">Core Stack</text>
   {''.join(tile_svg)}
 </svg>
@@ -536,7 +537,7 @@ def main():
         "widget-commits-mesh.svg": build_counter_widget(m),
         "widget-rings.svg": build_rings_widget(m),
         "widget-telemetry.svg": build_telemetry_row(m),
-        "widget-creator-stack.svg": build_stack_spotlight(),
+        "widget-creator-stack-v2.svg": build_stack_spotlight(),
         "link-elera.svg": build_link_pill("Elera AI", "#ff5e3a", "#ffd166"),
         "link-linkedin.svg": build_link_pill("LinkedIn", "#0a84ff", "#bf5af2"),
         "link-x.svg": build_link_pill("X  @NightEdge707", "#30d158", "#64d2ff"),
