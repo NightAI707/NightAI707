@@ -10,7 +10,7 @@
 
 ### About
 
-I work on AI products and intelligent systems — building tools that sit at the
+I work on AI products and intelligent systems, building tools that sit at the
 crosspoint of generative AI, design, and software engineering. Currently
 focused on **Elera AI**, an AI-powered creative editing platform.
 
@@ -25,7 +25,7 @@ Interested in cybersecurity and open-source when time permits.
 ### Currently
 
 ```
-▸ Building    Elera AI — creative editing with gen-AI
+▸ Building    Elera AI / creative editing with gen-AI
 ▸ Exploring   LLMs · AI agents · computer vision
 ▸ Learning    distributed systems · infra at scale
 ▸ Interested  cybersecurity · open-source dev
