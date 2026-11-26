@@ -1,0 +1,134 @@
+<svg fill="none" viewBox="0 0 800 180" width="800" height="180" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .card {
+          width: 800px;
+          height: 180px;
+          background: #0d1117;
+          display: flex;
+          align-items: stretch;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .card::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          border: 1px solid #21262d;
+          border-radius: 10px;
+          pointer-events: none;
+        }
+
+        .accent-bar {
+          width: 3px;
+          background: linear-gradient(180deg, #a78bfa 0%, #6366f1 50%, #4f46e5 100%);
+          border-radius: 10px 0 0 10px;
+          flex-shrink: 0;
+        }
+
+        .content {
+          flex: 1;
+          padding: 24px 28px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 10px;
+          opacity: 0;
+          animation: slideRight 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+        }
+
+        .project-name {
+          font-size: 18px;
+          font-weight: 600;
+          color: #f0f6fc;
+          letter-spacing: -0.3px;
+        }
+
+        .project-desc {
+          font-size: 13px;
+          color: #7d8590;
+          line-height: 1.5;
+          max-width: 500px;
+        }
+
+        .project-tags {
+          display: flex;
+          gap: 6px;
+          margin-top: 4px;
+        }
+
+        .pt {
+          font-size: 10px;
+          font-family: 'SF Mono', monospace;
+          color: #8b949e;
+          background: rgba(99, 102, 241, 0.06);
+          border: 1px solid rgba(99, 102, 241, 0.1);
+          padding: 2px 8px;
+          border-radius: 4px;
+          letter-spacing: 0.5px;
+        }
+
+        .meta-right {
+          width: 200px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          border-left: 1px solid #21262d;
+          opacity: 0;
+          animation: slideRight 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+        }
+
+        .status-badge {
+          font-size: 10px;
+          font-family: 'SF Mono', monospace;
+          color: #a78bfa;
+          border: 1px solid rgba(167, 139, 250, 0.2);
+          padding: 4px 12px;
+          border-radius: 12px;
+          letter-spacing: 1px;
+        }
+
+        .role-label {
+          font-size: 10px;
+          color: #484f58;
+          font-family: 'SF Mono', monospace;
+          letter-spacing: 0.5px;
+        }
+
+        @keyframes slideRight {
+          from { opacity: 0; transform: translateX(-10px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+      </style>
+
+      <div class="card">
+        <div class="accent-bar"></div>
+        <div class="content">
+          <div class="project-name">Elera AI</div>
+          <div class="project-desc">
+            An AI-powered creative editing platform reimagining how people create.
+            Blending generative AI with intuitive design tools to make professional-grade
+            creative workflows accessible to everyone.
+          </div>
+          <div class="project-tags">
+            <span class="pt">PYTHON</span>
+            <span class="pt">AI/ML</span>
+            <span class="pt">GEN-AI</span>
+            <span class="pt">CLOUD</span>
+          </div>
+        </div>
+        <div class="meta-right">
+          <div class="status-badge">IN DEVELOPMENT</div>
+          <div class="role-label">FOUNDER / LEAD</div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
