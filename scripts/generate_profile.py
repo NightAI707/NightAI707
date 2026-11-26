@@ -251,7 +251,7 @@ PRO_DIGITS = {
 
 
 def build_counter_widget(m: dict) -> str:
-    # Vibrant Apple Mesh Gradient Widget with Korataki Extra Bold wide geometric numerals
+    # Multi-layered Apple Mesh Gradient (coral-orange, amber, sky-blue, rose-pink) + Liquid Glass rim
     w, h = 204, 224
     num_str = str(m["total"])
     n = len(num_str)
@@ -268,18 +268,57 @@ def build_counter_widget(m: dict) -> str:
         dx = start_x + i * (digit_w + gap)
         digit_paths.append(
             f'<g transform="translate({dx:.1f},{start_y:.1f}) scale({scale:.3f})">'
-            f'<path d="{d}" fill="#ffffff" fill-opacity="0.25" fill-rule="evenodd" filter="url(#softGlow)"/>'
+            f'<path d="{d}" fill="#ffffff" fill-opacity="0.28" fill-rule="evenodd" filter="url(#softGlow)"/>'
             f'<path d="{d}" fill="#ffffff" fill-opacity="0.96" fill-rule="evenodd"/>'
             f'</g>'
         )
 
     return f"""<svg fill="none" viewBox="0 0 {w} {h}" width="100%" xmlns="http://www.w3.org/2000/svg">
   {COMMON_DEFS}
-  <rect x="1" y="1" width="{w-2}" height="{h-2}" rx="26" fill="url(#meshWarm)" stroke="#ffffff" stroke-opacity="0.34" stroke-width="1.2"/>
-  <line x1="26" y1="2" x2="{w-26}" y2="2" stroke="#ffffff" stroke-opacity="0.58" stroke-width="1"/>
-  <text x="22" y="32" font-family="{FONT_SANS}" font-size="11.5" font-weight="600" letter-spacing="0.8" fill="#ffffff" fill-opacity="0.90">COMMITS</text>
+  <defs>
+    <clipPath id="meshClip">
+      <rect x="1.5" y="1.5" width="{w-3}" height="{h-3}" rx="25"/>
+    </clipPath>
+    <linearGradient id="meshBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b4a"/>
+      <stop offset="50%" stop-color="#ff9a44"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <radialGradient id="blobOrange" cx="18%" cy="22%" r="60%">
+      <stop offset="0%" stop-color="#ff5e3a" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#ff5e3a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobAmber" cx="82%" cy="28%" r="55%">
+      <stop offset="0%" stop-color="#ffb347" stop-opacity="0.90"/>
+      <stop offset="100%" stop-color="#ffb347" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobBlue" cx="46%" cy="82%" r="52%">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.95"/>
+      <stop offset="55%" stop-color="#93c5fd" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobPink" cx="86%" cy="86%" r="55%">
+      <stop offset="0%" stop-color="#f472b6" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#f472b6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="meshRim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.58"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.72"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#meshClip)">
+    <rect width="{w}" height="{h}" fill="url(#meshBase)"/>
+    <rect width="{w}" height="{h}" fill="url(#blobOrange)"/>
+    <rect width="{w}" height="{h}" fill="url(#blobAmber)"/>
+    <rect width="{w}" height="{h}" fill="url(#blobBlue)"/>
+    <rect width="{w}" height="{h}" fill="url(#blobPink)"/>
+    <ellipse cx="{w/2}" cy="12" rx="{w*0.45}" ry="18" fill="#ffffff" fill-opacity="0.14"/>
+  </g>
+  <rect x="1.5" y="1.5" width="{w-3}" height="{h-3}" rx="25" fill="none" stroke="url(#meshRim)" stroke-width="1.4"/>
+  <text x="22" y="32" font-family="{FONT_SANS}" font-size="11.5" font-weight="600" letter-spacing="0.8" fill="#ffffff" fill-opacity="0.92">COMMITS</text>
   {''.join(digit_paths)}
-  <text x="22" y="200" font-family="{FONT_SANS}" font-size="12" font-weight="500" fill="#ffffff" fill-opacity="0.88">Last 365 days</text>
+  <text x="22" y="200" font-family="{FONT_SANS}" font-size="12" font-weight="500" fill="#ffffff" fill-opacity="0.90">Last 365 days</text>
 </svg>
 """
 
@@ -481,7 +520,7 @@ def main():
     outputs = {
         "dynamic-island.svg": build_dynamic_island(m),
         "widget-bio.svg": build_bio_widget(),
-        "widget-commits-korataki.svg": build_counter_widget(m),
+        "widget-commits-mesh.svg": build_counter_widget(m),
         "widget-rings.svg": build_rings_widget(m),
         "widget-telemetry.svg": build_telemetry_row(m),
         "widget-core-stack.svg": build_stack_spotlight(),

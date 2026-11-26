@@ -4,19 +4,11 @@
 
 <img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/dynamic-island.svg?v=4" alt="Dynamic Island Live Activity" width="100%" />
 
-<table width="100%">
-  <tr>
-    <td width="49%" valign="top">
-      <img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/widget-bio.svg?v=4" alt="About Night Edge" width="100%" />
-    </td>
-    <td width="25.5%" valign="top">
-      <img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/widget-commits-korataki.svg" alt="Commits" width="100%" />
-    </td>
-    <td width="25.5%" valign="top">
-      <img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/widget-rings.svg?v=4" alt="Activity Rings" width="100%" />
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/widget-bio.svg?v=4" alt="About Night Edge" width="48.5%" />
+  <img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/widget-commits-mesh.svg" alt="Commits" width="24.5%" />
+  <img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/widget-rings.svg?v=4" alt="Activity Rings" width="24.5%" />
+</p>
 
 <img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/widget-telemetry.svg?v=4" alt="Monthly Output & Contribution Pulse" width="100%" />
 
