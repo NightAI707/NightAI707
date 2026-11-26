@@ -1,115 +1,120 @@
-<p align="center">
-  <img src="./assets/header.svg" alt="Night Edge" width="100%" />
-</p>
+<!-- Banner -->
+<a href="https://github.com/NightAI707">
+  <img src="./assets/banner.svg" alt="Night Edge Banner" style="width:100%; height:auto" />
+</a>
 
-<br/>
+<div align="center">
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### About
-
-I work on AI products and intelligent systems, building tools that sit at the
-crosspoint of generative AI, design, and software engineering. Currently
-focused on **Elera AI**, an AI-powered creative editing platform.
-
-Previously shipped AI products, Roblox experiences, and research prototypes.
-Interested in cybersecurity and open-source when time permits.
-
-**IIT Patna** · Founder @ **Elera AI**
-
-</td>
-<td width="50%" valign="top">
-
-### Currently
-
-```
-▸ Building    Elera AI / creative editing with gen-AI
-▸ Exploring   LLMs · AI agents · computer vision
-▸ Learning    distributed systems · infra at scale
-▸ Interested  cybersecurity · open-source dev
-```
-
-<p align="right">
-  <a href="https://www.linkedin.com/in/night-edge-667aa32b4/">
-    <img src="https://img.shields.io/badge/linkedin-0A66C2?style=flat-square&logo=linkedin&logoColor=white&labelColor=0A66C2" height="20" />
-  </a>&nbsp;
-  <a href="https://x.com/NightEdge707">
-    <img src="https://img.shields.io/badge/x-000000?style=flat-square&logo=x&logoColor=white&labelColor=000" height="20" />
-  </a>&nbsp;
   <a href="https://github.com/NightAI707">
-    <img src="https://img.shields.io/badge/github-181717?style=flat-square&logo=github&logoColor=white&labelColor=181717" height="20" />
+    <img width="120px"
+        alt="Stars"
+        title="Profile Stars"
+        src="https://custom-icon-badges.demolab.com/badge/dynamic/json?logo=star&color=000000&labelColor=00E5FF&logoColor=000000&label=Stars&style=for-the-badge&query=%24.stars&url=https://api.github-star-counter.workers.dev/user/NightAI707" />&nbsp;
   </a>
-</p>
+  <a href="https://github.com/NightAI707/NightAI707">
+    <img width="114px"
+        alt="Forks"
+        title="Repository Forks"
+        src="https://custom-icon-badges.demolab.com/github/forks/NightAI707/NightAI707?color=000000&logo=fork&style=for-the-badge&logoColor=000000&labelColor=00E5FF" />&nbsp;
+  </a>
+  <a href="https://github.com/NightAI707?tab=followers">
+    <img width="150px"
+        alt="Followers"
+        title="GitHub Followers"
+        src="https://custom-icon-badges.demolab.com/github/followers/NightAI707?color=000000&labelColor=00E5FF&style=for-the-badge&logo=person-add&label=Followers&logoColor=000000" />
+  </a>
+</div>
 
-</td>
-</tr>
+<br/>
+
+<!-- Who Am I? -->
+<img src="./assets/liquid-emblem.svg" width="360" align="left" />
+<div align="center">
+
+**Who Am I?**
+</div>
+
+<div align="justify">
+
+I am **Night Edge**, an **AI Engineer** and student at `IIT Patna`, currently building **Elera AI** while exploring the frontier of `Generative AI` and `AI-Native Computing`. My work is driven by **continuous experimentation**, **systems thinking**, and a commitment to crafting **intelligent products** that feel effortless to use.
+
+Over time, I have built across **AI systems**, **full-stack software**, and **interactive worlds**, where `logic` meets `creative design`. Alongside generative pipelines and autonomous agents, I have shipped **AI products**, **Roblox experiences**, and **research prototypes** spanning `Python`, `TypeScript`, and `Lua`.
+
+At the moment, I am focused on **Elera AI**, reimagining creative editing workflows from the ground up with `generative models`, `computer vision`, and `cloud infrastructure`. I also explore **cybersecurity** and **open-source software**, constantly pushing myself to build cleaner, faster, and smarter systems.
+
+</div>
+
+<br/>
+<br/>
+
+<!-- Social Badges -->
+<div align="center">
+  <strong>You can Click here</strong>
+  <br/>
+
+  <a href="https://www.linkedin.com/in/night-edge-667aa32b4/" target="_blank">
+    <img width="124px"
+          src="https://img.shields.io/badge/LinkedIn-00E5FF?style=for-the-badge&logo=linkedin&logoColor=000000"
+          alt="LinkedIn"
+          title="My LinkedIn" />
+  </a>
+  <a href="https://x.com/NightEdge707" target="_blank">
+    <img width="96px"
+          src="https://img.shields.io/badge/X-00E5FF?style=for-the-badge&logo=x&logoColor=000000"
+          alt="X"
+          title="My X" />
+  </a>
+  <a href="https://github.com/NightAI707" target="_blank">
+    <img width="118px"
+          src="https://img.shields.io/badge/GitHub-00E5FF?style=for-the-badge&logo=github&logoColor=000000"
+          alt="GitHub"
+          title="My GitHub" />
+  </a>
+
+</div>
+<br/>
+
+<img src="./assets/glass-shard.svg" width="106" align="right" />
+
+> [!Caution]
+>
+> Code is never finished, it only gets **better**.
+>
+> What you see here is built with **practice**, **curiosity**, and **persistence**.
+
+<br/>
+
+<!-- My Contributions Title -->
+<div align="center">
+  <img src="./assets/contributions-title.svg" width="50%" />
+  <br/>
+  <br/>
+</div>
+
+<a href="https://github.com/NightAI707">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=NightAI707&custom_title=My%20Contributions&hide_border=false&theme=high-contrast&border_color=00E5FF&bg_color=000000&radius=16&area_color=00E5FF&area=true&point=ffffff&line=00E5FF&days=14&text_color=ffffff&title_color=ffffff&include_all_commits=true&count_private=true" width="100%" />
+</a>
+
+<br/>
+
+<table align="center">
+  <tr>
+    <!-- Skills Left -->
+    <td valign="top" width="45%">
+      <img src="./assets/stack-title.svg" width="100%" />
+      <br/>
+      <br/>
+      <img src="./assets/stack-grid.svg" width="100%" />
+    </td>
+    <!-- Project + Streak Right -->
+    <td valign="top" width="55%">
+      <a href="https://github.com/NightAI707">
+        <img src="./assets/elera-glass-card.svg" width="100%" />
+      </a>
+      <br/>
+      <a href="https://git.io/streak-stats">
+        <img src="https://streak-stats.demolab.com?user=NightAI707&theme=dark&background=000000&border=00E5FF&ring=00E5FF&fire=00E5FF&currStreakNum=FFFFFF&card_width=430&sideNums=FFFFFF&currStreakLabel=00E5FF&sideLabels=00E5FF&dates=FFFFFF&border_radius=18" width="100%" />
+      </a>
+    </td>
+  </tr>
 </table>
-
-<br/>
-
-<p align="center">
-  <img src="./assets/tech-stack.svg" alt="Tech Stack" width="100%" />
-</p>
-
-<br/>
-
-### Featured Work
-
-<p align="center">
-  <img src="./assets/elera-card.svg" alt="Elera AI" width="100%" />
-</p>
-
-<br/>
-
-<details>
-<summary>&nbsp;<b>Research Interests</b></summary>
-
-<br/>
-
-| Domain | Focus |
-| :--- | :--- |
-| **Generative AI** | Creative tools, image/video generation pipelines, prompt engineering |
-| **LLMs & Agents** | Autonomous AI agents, tool-use, reasoning architectures |
-| **Computer Vision** | Real-time perception, multimodal understanding |
-| **AI-Native Computing** | Rethinking software from the ground up around intelligence |
-
-</details>
-
-<br/>
-
-### Metrics
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=NightAI707&show_icons=true&hide_border=true&bg_color=0d1117&title_color=a78bfa&icon_color=a78bfa&text_color=c9d1d9&ring_color=a78bfa&count_private=true&hide_title=true" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=NightAI707&show_icons=true&hide_border=true&bg_color=ffffff&title_color=6366f1&icon_color=6366f1&text_color=24292e&ring_color=6366f1&count_private=true&hide_title=true" />
-    <img width="49%" src="https://github-readme-stats.vercel.app/api?username=NightAI707&show_icons=true&hide_border=true&bg_color=0d1117&title_color=a78bfa&icon_color=a78bfa&text_color=c9d1d9&ring_color=a78bfa&count_private=true&hide_title=true" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com?user=NightAI707&hide_border=true&background=0d1117&stroke=21262d&ring=a78bfa&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=7d8590&dates=484f58&currStreakNum=c9d1d9&sideNums=c9d1d9" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com?user=NightAI707&hide_border=true&background=ffffff&ring=6366f1&fire=6366f1&currStreakLabel=6366f1&sideLabels=24292e&dates=57606a" />
-    <img width="49%" src="https://github-readme-streak-stats.herokuapp.com?user=NightAI707&hide_border=true&background=0d1117&stroke=21262d&ring=a78bfa&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=7d8590&dates=484f58&currStreakNum=c9d1d9&sideNums=c9d1d9" />
-  </picture>
-</p>
-
-<br/>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=NightAI707&bg_color=0d1117&color=a78bfa&line=6366f1&point=c9d1d9&area=true&area_color=6366f1&hide_border=true&custom_title=" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=NightAI707&bg_color=ffffff&color=6366f1&line=6366f1&point=24292e&area=true&area_color=6366f1&hide_border=true&custom_title=" />
-    <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=NightAI707&bg_color=0d1117&color=a78bfa&line=6366f1&point=c9d1d9&area=true&area_color=6366f1&hide_border=true&custom_title=" />
-  </picture>
-</p>
-
-<br/>
-
-<p align="center">
-  <img src="./assets/footer.svg" alt="Footer" width="100%" />
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=NightAI707&color=6366f1&style=flat-square&label=views" height="18" />
-</p>

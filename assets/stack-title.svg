@@ -1,0 +1,20 @@
+<svg fill="none" viewBox="0 0 380 50" width="380" height="50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="stackPill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#00f0ff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="stackRim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.38"/>
+      <stop offset="50%" stop-color="#00f0ff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.25"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="3" width="376" height="44" rx="22" fill="#000000"/>
+  <rect x="2" y="3" width="376" height="44" rx="22" fill="url(#stackPill)" stroke="url(#stackRim)" stroke-width="1.2"/>
+  <path d="M 32 4 H 348" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1"/>
+  <circle cx="30" cy="25" r="3.5" fill="#00f0ff"/>
+  <circle cx="350" cy="25" r="3.5" fill="#00f0ff"/>
+  <text x="190" y="30" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="15" font-weight="600" letter-spacing="2.8" fill="#e0f2fe">MY TECH STACK</text>
+</svg>

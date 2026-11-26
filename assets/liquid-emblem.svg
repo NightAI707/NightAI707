@@ -1,0 +1,80 @@
+<svg fill="none" viewBox="0 0 380 380" width="380" height="380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#0891b2" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glassSphere" x1="15%" y1="10%" x2="85%" y2="90%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="30%" stop-color="#22d3ee" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#083344" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="rimRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#00f0ff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="blurOrb" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="neon" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="4" result="g"/>
+      <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer Ambient Cyan Aura -->
+  <circle cx="190" cy="190" r="145" fill="url(#coreGlow)" filter="url(#blurOrb)">
+    <animate attributeName="r" values="135;152;135" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Outer Tilted Liquid Glass Orbit 1 -->
+  <g transform="translate(190,190) rotate(-24)">
+    <ellipse rx="148" ry="52" fill="none" stroke="#22d3ee" stroke-opacity="0.28" stroke-width="1.2"/>
+    <ellipse rx="148" ry="52" fill="none" stroke="#ffffff" stroke-opacity="0.45" stroke-width="1.5" stroke-dasharray="40 260">
+      <animate attributeName="stroke-dashoffset" values="0;-300" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- Outer Tilted Liquid Glass Orbit 2 -->
+  <g transform="translate(190,190) rotate(28)">
+    <ellipse rx="140" ry="48" fill="none" stroke="#06b6d4" stroke-opacity="0.24" stroke-width="1.2"/>
+    <ellipse rx="140" ry="48" fill="none" stroke="#67e8f9" stroke-opacity="0.55" stroke-width="1.5" stroke-dasharray="32 280">
+      <animate attributeName="stroke-dashoffset" values="0;312" dur="9s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- Central Apple Liquid Glass Sphere -->
+  <circle cx="190" cy="190" r="96" fill="url(#glassSphere)" stroke="url(#rimRing)" stroke-width="1.6"/>
+
+  <!-- Inner Specular Crescent -->
+  <path d="M 122 145 A 82 82 0 0 1 245 125" fill="none" stroke="#ffffff" stroke-opacity="0.48" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Geometric Neural Core -->
+  <g transform="translate(190,190)">
+    <polygon points="0,-54 47,-27 47,27 0,54 -47,27 -47,-27" fill="#00f0ff" fill-opacity="0.06" stroke="#22d3ee" stroke-opacity="0.5" stroke-width="1.2">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="30s" repeatCount="indefinite"/>
+    </polygon>
+    <polygon points="0,-34 30,0 0,34 -30,0" fill="#22d3ee" fill-opacity="0.14" stroke="#a5f3fc" stroke-opacity="0.8" stroke-width="1.2" filter="url(#neon)">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="20s" repeatCount="indefinite"/>
+    </polygon>
+    <circle r="8" fill="#00f0ff" filter="url(#neon)">
+      <animate attributeName="r" values="7;10;7" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Floating Glass Nodes -->
+  <g filter="url(#neon)">
+    <circle cx="64" cy="140" r="4" fill="#22d3ee">
+      <animate attributeName="cy" values="140;128;140" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="318" cy="236" r="4.5" fill="#67e8f9">
+      <animate attributeName="cy" values="236;248;236" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="268" cy="76" r="3" fill="#ffffff" fill-opacity="0.8">
+      <animate attributeName="opacity" values="0.3;0.95;0.3" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
