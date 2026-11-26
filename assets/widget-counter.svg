@@ -1,0 +1,38 @@
+<svg fill="none" viewBox="0 0 204 224" width="100%" xmlns="http://www.w3.org/2000/svg">
+  
+  <defs>
+    <linearGradient id="cardDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#16161a"/>
+      <stop offset="100%" stop-color="#0b0b0d"/>
+    </linearGradient>
+    <linearGradient id="cardRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.24"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.14"/>
+    </linearGradient>
+    <linearGradient id="meshWarm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff2d55"/>
+      <stop offset="52%" stop-color="#ff6b35"/>
+      <stop offset="100%" stop-color="#ffd166"/>
+    </linearGradient>
+    <linearGradient id="tideArea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a84ff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#0a84ff" stop-opacity="0.0"/>
+    </linearGradient>
+    <radialGradient id="stackSpot" cx="50%" cy="48%" r="46%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.34"/>
+      <stop offset="55%" stop-color="#1d4ed8" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="1" y="1" width="202" height="222" rx="26" fill="url(#meshWarm)" stroke="#ffffff" stroke-opacity="0.32" stroke-width="1.2"/>
+  <line x1="26" y1="2" x2="178" y2="2" stroke="#ffffff" stroke-opacity="0.55" stroke-width="1"/>
+  <text x="22" y="34" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif" font-size="11.5" font-weight="600" letter-spacing="0.8" fill="#ffffff" fill-opacity="0.88">COMMITS</text>
+  <text x="102" y="142" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif" font-size="84" font-weight="300" letter-spacing="-3" fill="#ffffff" fill-opacity="0.95">3</text>
+  <text x="22" y="196" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif" font-size="12" font-weight="500" fill="#ffffff" fill-opacity="0.85">Last 365 days</text>
+</svg>
