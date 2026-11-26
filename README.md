@@ -10,7 +10,7 @@
       <img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/widget-bio.svg?v=4" alt="About Night Edge" width="100%" />
     </td>
     <td width="25.5%" valign="top">
-      <img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/widget-counter.svg?v=4" alt="Commits" width="100%" />
+      <img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/widget-commits-pro.svg" alt="Commits" width="100%" />
     </td>
     <td width="25.5%" valign="top">
       <img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/widget-rings.svg?v=4" alt="Activity Rings" width="100%" />

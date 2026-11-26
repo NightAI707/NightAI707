@@ -235,16 +235,53 @@ def build_bio_widget() -> str:
 """
 
 
+# Stylized Apple Pro Max Lock-Screen / WatchOS rounded-geometric digit paths (viewBox 0 0 100 130)
+PRO_DIGITS = {
+    "0": "M50,12 C74,12 88,30 88,65 C88,100 74,118 50,118 C26,118 12,100 12,65 C12,30 26,12 50,12 Z",
+    "1": "M30,30 C42,26 50,18 54,12 L54,118",
+    "2": "M20,38 C20,20 34,12 52,12 C70,12 82,22 82,38 C82,58 58,72 20,116 L84,116",
+    "3": "M22,30 C28,16 40,11 53,11 C71,11 82,22 82,36 C82,50 70,60 50,62 C72,64 85,75 85,92 C85,109 70,119 51,119 C35,119 23,112 18,100",
+    "4": "M68,118 L68,14 L16,84 L86,84",
+    "5": "M80,14 L26,14 L22,58 C30,52 40,49 52,49 C72,49 85,62 85,84 C85,106 70,119 49,119 C33,119 21,111 17,99",
+    "6": "M76,22 C68,14 58,11 48,12 C26,14 14,34 14,68 C14,102 28,119 51,119 C72,119 86,105 86,85 C86,66 72,53 52,53 C34,53 20,64 16,78",
+    "7": "M18,14 L84,14 L38,118",
+    "8": "M50,62 C32,62 20,51 20,36 C20,21 32,11 50,11 C68,11 80,21 80,36 C80,51 68,62 50,62 Z M50,62 C29,62 16,74 16,91 C16,108 30,119 50,119 C70,119 84,108 84,91 C84,74 71,62 50,62 Z",
+    "9": "M24,108 C32,116 42,119 52,118 C74,116 86,96 86,62 C86,28 72,11 49,11 C28,11 14,25 14,45 C14,64 28,77 48,77 C66,77 80,66 84,52",
+}
+
+
 def build_counter_widget(m: dict) -> str:
-    # Vibrant Apple Mesh Gradient Widget (Image 1 "38" aesthetic)
+    # Vibrant Apple Mesh Gradient Widget with oversized stylized Pro Max Lock-Screen numerals
     w, h = 204, 224
+    num_str = str(m["total"])
+    n = len(num_str)
+    # Scale and position digits cleanly inside 204x224
+    scale = 1.15 if n == 1 else (0.86 if n == 2 else 0.62)
+    digit_w = 100 * scale
+    gap = -6 * scale
+    total_w = n * digit_w + (n - 1) * gap
+    start_x = (w - total_w) / 2
+    start_y = (h - 130 * scale) / 2 + 4
+
+    digit_paths = []
+    for i, ch in enumerate(num_str):
+        d = PRO_DIGITS.get(ch, PRO_DIGITS["0"])
+        dx = start_x + i * (digit_w + gap)
+        # Soft outer glow stroke + crisp luminous white rounded stroke
+        digit_paths.append(
+            f'<g transform="translate({dx:.1f},{start_y:.1f}) scale({scale:.3f})">'
+            f'<path d="{d}" fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" filter="url(#softGlow)"/>'
+            f'<path d="{d}" fill="none" stroke="#ffffff" stroke-opacity="0.96" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>'
+            f'</g>'
+        )
+
     return f"""<svg fill="none" viewBox="0 0 {w} {h}" width="100%" xmlns="http://www.w3.org/2000/svg">
   {COMMON_DEFS}
-  <rect x="1" y="1" width="{w-2}" height="{h-2}" rx="26" fill="url(#meshWarm)" stroke="#ffffff" stroke-opacity="0.32" stroke-width="1.2"/>
-  <line x1="26" y1="2" x2="{w-26}" y2="2" stroke="#ffffff" stroke-opacity="0.55" stroke-width="1"/>
-  <text x="22" y="34" font-family="{FONT_SANS}" font-size="11.5" font-weight="600" letter-spacing="0.8" fill="#ffffff" fill-opacity="0.88">COMMITS</text>
-  <text x="{w/2:.0f}" y="142" text-anchor="middle" font-family="{FONT_SANS}" font-size="84" font-weight="300" letter-spacing="-3" fill="#ffffff" fill-opacity="0.95">{m['total']}</text>
-  <text x="22" y="196" font-family="{FONT_SANS}" font-size="12" font-weight="500" fill="#ffffff" fill-opacity="0.85">Last 365 days</text>
+  <rect x="1" y="1" width="{w-2}" height="{h-2}" rx="26" fill="url(#meshWarm)" stroke="#ffffff" stroke-opacity="0.34" stroke-width="1.2"/>
+  <line x1="26" y1="2" x2="{w-26}" y2="2" stroke="#ffffff" stroke-opacity="0.58" stroke-width="1"/>
+  <text x="22" y="32" font-family="{FONT_SANS}" font-size="11.5" font-weight="600" letter-spacing="0.8" fill="#ffffff" fill-opacity="0.90">COMMITS</text>
+  {''.join(digit_paths)}
+  <text x="22" y="200" font-family="{FONT_SANS}" font-size="12" font-weight="500" fill="#ffffff" fill-opacity="0.88">Last 365 days</text>
 </svg>
 """
 
@@ -446,7 +483,7 @@ def main():
     outputs = {
         "dynamic-island.svg": build_dynamic_island(m),
         "widget-bio.svg": build_bio_widget(),
-        "widget-counter.svg": build_counter_widget(m),
+        "widget-commits-pro.svg": build_counter_widget(m),
         "widget-rings.svg": build_rings_widget(m),
         "widget-telemetry.svg": build_telemetry_row(m),
         "widget-core-stack.svg": build_stack_spotlight(),
