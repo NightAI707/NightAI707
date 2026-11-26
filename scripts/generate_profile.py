@@ -235,43 +235,41 @@ def build_bio_widget() -> str:
 """
 
 
-# Stylized Apple Pro Max Lock-Screen / WatchOS rounded-geometric digit paths (viewBox 0 0 100 130)
+# Korataki Extra Bold inspired wide, heavy, squared-geometric futuristic digit paths (viewBox 0 0 140 100)
 PRO_DIGITS = {
-    "0": "M50,12 C74,12 88,30 88,65 C88,100 74,118 50,118 C26,118 12,100 12,65 C12,30 26,12 50,12 Z",
-    "1": "M30,30 C42,26 50,18 54,12 L54,118",
-    "2": "M20,38 C20,20 34,12 52,12 C70,12 82,22 82,38 C82,58 58,72 20,116 L84,116",
-    "3": "M22,30 C28,16 40,11 53,11 C71,11 82,22 82,36 C82,50 70,60 50,62 C72,64 85,75 85,92 C85,109 70,119 51,119 C35,119 23,112 18,100",
-    "4": "M68,118 L68,14 L16,84 L86,84",
-    "5": "M80,14 L26,14 L22,58 C30,52 40,49 52,49 C72,49 85,62 85,84 C85,106 70,119 49,119 C33,119 21,111 17,99",
-    "6": "M76,22 C68,14 58,11 48,12 C26,14 14,34 14,68 C14,102 28,119 51,119 C72,119 86,105 86,85 C86,66 72,53 52,53 C34,53 20,64 16,78",
-    "7": "M18,14 L84,14 L38,118",
-    "8": "M50,62 C32,62 20,51 20,36 C20,21 32,11 50,11 C68,11 80,21 80,36 C80,51 68,62 50,62 Z M50,62 C29,62 16,74 16,91 C16,108 30,119 50,119 C70,119 84,108 84,91 C84,74 71,62 50,62 Z",
-    "9": "M24,108 C32,116 42,119 52,118 C74,116 86,96 86,62 C86,28 72,11 49,11 C28,11 14,25 14,45 C14,64 28,77 48,77 C66,77 80,66 84,52",
+    "0": "M22,10 L118,10 L130,22 L130,78 L118,90 L22,90 L10,78 L10,22 Z M36,30 L36,70 L104,70 L104,30 Z",
+    "1": "M36,10 L84,10 L84,90 L58,90 L58,30 L36,30 Z",
+    "2": "M12,10 L118,10 L130,22 L130,48 L118,60 L38,60 L38,70 L130,70 L130,90 L12,90 L12,50 L24,38 L104,38 L104,30 L12,30 Z",
+    "3": "M12,10 L118,10 L130,22 L130,42 L118,50 L130,58 L130,78 L118,90 L12,90 L12,70 L102,70 L102,59 L40,59 L40,41 L102,41 L102,30 L12,30 Z",
+    "4": "M10,10 L38,10 L38,44 L98,44 L98,10 L126,10 L126,90 L98,90 L98,64 L22,64 L10,52 Z",
+    "5": "M12,10 L128,10 L128,30 L38,30 L38,40 L118,40 L130,52 L130,78 L118,90 L12,90 L12,70 L102,70 L102,60 L24,60 L12,48 Z",
+    "6": "M22,10 L126,10 L126,30 L38,30 L38,40 L118,40 L130,52 L130,78 L118,90 L22,90 L10,78 L10,22 Z M38,59 L38,71 L102,71 L102,59 Z",
+    "7": "M12,10 L130,10 L130,30 L84,90 L54,90 L98,30 L12,30 Z",
+    "8": "M22,10 L118,10 L130,22 L130,42 L118,50 L130,58 L130,78 L118,90 L22,90 L10,78 L10,58 L22,50 L10,42 L10,22 Z M38,29 L38,41 L102,41 L102,29 Z M38,59 L38,71 L102,71 L102,59 Z",
+    "9": "M22,10 L118,10 L130,22 L130,78 L118,90 L14,90 L14,70 L102,70 L102,60 L22,60 L10,48 L10,22 Z M38,29 L38,41 L102,41 L102,29 Z",
 }
 
 
 def build_counter_widget(m: dict) -> str:
-    # Vibrant Apple Mesh Gradient Widget with oversized stylized Pro Max Lock-Screen numerals
+    # Vibrant Apple Mesh Gradient Widget with Korataki Extra Bold wide geometric numerals
     w, h = 204, 224
     num_str = str(m["total"])
     n = len(num_str)
-    # Scale and position digits cleanly inside 204x224
-    scale = 1.15 if n == 1 else (0.86 if n == 2 else 0.62)
-    digit_w = 100 * scale
-    gap = -6 * scale
+    scale = 0.96 if n == 1 else (0.58 if n == 2 else 0.40)
+    digit_w = 140 * scale
+    gap = 6 * scale
     total_w = n * digit_w + (n - 1) * gap
     start_x = (w - total_w) / 2
-    start_y = (h - 130 * scale) / 2 + 4
+    start_y = (h - 100 * scale) / 2 + 4
 
     digit_paths = []
     for i, ch in enumerate(num_str):
         d = PRO_DIGITS.get(ch, PRO_DIGITS["0"])
         dx = start_x + i * (digit_w + gap)
-        # Soft outer glow stroke + crisp luminous white rounded stroke
         digit_paths.append(
             f'<g transform="translate({dx:.1f},{start_y:.1f}) scale({scale:.3f})">'
-            f'<path d="{d}" fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" filter="url(#softGlow)"/>'
-            f'<path d="{d}" fill="none" stroke="#ffffff" stroke-opacity="0.96" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>'
+            f'<path d="{d}" fill="#ffffff" fill-opacity="0.25" fill-rule="evenodd" filter="url(#softGlow)"/>'
+            f'<path d="{d}" fill="#ffffff" fill-opacity="0.96" fill-rule="evenodd"/>'
             f'</g>'
         )
 
@@ -483,7 +481,7 @@ def main():
     outputs = {
         "dynamic-island.svg": build_dynamic_island(m),
         "widget-bio.svg": build_bio_widget(),
-        "widget-commits-pro.svg": build_counter_widget(m),
+        "widget-commits-korataki.svg": build_counter_widget(m),
         "widget-rings.svg": build_rings_widget(m),
         "widget-telemetry.svg": build_telemetry_row(m),
         "widget-core-stack.svg": build_stack_spotlight(),
