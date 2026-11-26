@@ -390,18 +390,18 @@ def build_link_pill(title: str, c_left: str, c_right: str) -> str:
     </clipPath>
     <linearGradient id="horiz_{uid}" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="{c_left}"/>
-      <stop offset="50%" stop-color="{c_left}" stop-opacity="0.45"/>
+      <stop offset="48%" stop-color="{c_left}" stop-opacity="0.55"/>
       <stop offset="100%" stop-color="{c_right}"/>
     </linearGradient>
     <linearGradient id="vertFade_{uid}" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#050507" stop-opacity="0.96"/>
-      <stop offset="38%" stop-color="#050507" stop-opacity="0.72"/>
-      <stop offset="78%" stop-color="#050507" stop-opacity="0.08"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="0%" stop-color="#050507" stop-opacity="0.88"/>
+      <stop offset="28%" stop-color="#050507" stop-opacity="0.45"/>
+      <stop offset="60%" stop-color="#050507" stop-opacity="0.0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.28"/>
     </linearGradient>
-    <radialGradient id="btmGlow_{uid}" cx="50%" cy="105%" r="65%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.48"/>
-      <stop offset="55%" stop-color="#ffffff" stop-opacity="0.08"/>
+    <radialGradient id="btmGlow_{uid}" cx="50%" cy="100%" r="75%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.52"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.14"/>
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="rim_{uid}" x1="0%" y1="0%" x2="0%" y2="100%">

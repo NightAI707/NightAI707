@@ -23,9 +23,9 @@
 <img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/widget-stack.svg?v=4" alt="Core Stack" width="100%" />
 
 <p align="center">
-  <a href="https://github.com/NightAI707"><img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/link-elera.svg?v=4" alt="Elera AI" width="32%" /></a>
-  <a href="https://www.linkedin.com/in/night-edge-667aa32b4/"><img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/link-linkedin.svg?v=4" alt="LinkedIn" width="32%" /></a>
-  <a href="https://x.com/NightEdge707"><img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/link-x.svg?v=4" alt="X" width="32%" /></a>
+  <a href="https://github.com/NightAI707"><img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/link-elera.svg?v=5" alt="Elera AI" width="32%" /></a>
+  <a href="https://www.linkedin.com/in/night-edge-667aa32b4/"><img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/link-linkedin.svg?v=5" alt="LinkedIn" width="32%" /></a>
+  <a href="https://x.com/NightEdge707"><img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/link-x.svg?v=5" alt="X" width="32%" /></a>
 </p>
 
 </div>
