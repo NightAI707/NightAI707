@@ -1,125 +1,176 @@
 <div align="center">
 
 <!-- Header Banner -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:1f6feb&height=220&section=header&text=Night%20Edge&fontSize=70&fontColor=e6edf3&fontAlignY=35&desc=Building%20the%20future%20with%20AI&descSize=18&descColor=8b949e&descAlignY=55&animation=fadeIn" />
-
-<!-- Typing Animation -->
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=80&lines=Founder+%40+Elera+AI+%F0%9F%9A%80;IIT+Patna+%E2%80%A2+AI+Engineer+%E2%80%A2+Builder" alt="Typing SVG" />
-</a>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,30:161b22,60:1a1b2e,100:302b63&height=250&section=header&text=NightEdge&fontSize=75&fontColor=e6edf3&fontAlignY=30&desc=I+create+things+for+the+AI-powered+future&descSize=16&descColor=8b949e&descAlignY=52&animation=fadeIn" />
 
 <br/>
 
-<!-- Badges -->
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/night-edge-667aa32b4/)
-[![Twitter](https://img.shields.io/badge/X_(Twitter)-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/NightEdge707)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/NightAI707)
+<a href="https://github.com/NightAI707">
+  <img src="https://img.shields.io/badge/AI_Engineer-0d1117?style=for-the-badge&logoColor=white" />
+</a>
+<a href="https://github.com/NightAI707">
+  <img src="https://img.shields.io/badge/Builder-0d1117?style=for-the-badge&logoColor=white" />
+</a>
 
 </div>
 
 ---
 
-## 🧠 About Me
+## ✍️ About Me
 
-```yaml
-name: Night Edge
-role: Founder & AI Engineer
-org: Elera AI
-education: IIT Patna
-location: India
-interests:
-  - Generative AI & AI-Native Computing
-  - Intelligent Creative Tools
-  - Open-Source Development
-  - Cybersecurity
-```
+> I'm passionate about **AI, software engineering, and emerging technologies**. I enjoy building things that merge **creativity with intelligence** — crafting smart tools, AI products, and exploring what's possible at the edge of tech.
 
-> **I build AI products at the intersection of creativity, intelligence, and technology.**  
-> Currently focused on **Elera AI** — an AI-powered creative editing platform that's reimagining how people create.
+🔭 **What I'm about:**
+
+- 🧠 &nbsp; Game Design, Generative AI, and all things involving **AI-native computing**
+- 🎓 &nbsp; Student @ **IIT Patna** — learning, building, shipping
+- 🚀 &nbsp; Building **Elera AI** — an AI-powered creative editing platform
+- 🔐 &nbsp; Interested in **cybersecurity** and open-source development
+- 💡 &nbsp; "If it involves AI and creativity, I'm probably building something with it"
+
+<br/>
+
+<div align="center">
+
+### 🤝 Follow Me
+
+<a href="https://www.linkedin.com/in/night-edge-667aa32b4/">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+<a href="https://x.com/NightEdge707">
+  <img src="https://img.shields.io/badge/X_(Twitter)-000000?style=for-the-badge&logo=x&logoColor=white" />
+</a>
+<a href="https://github.com/NightAI707">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
+</div>
 
 ---
 
-## 🚀 What I'm Working On
+<div align="center">
+
+## 🛠️ Languages & Tools
+
+<br/>
+
+<a href="#"><img src="https://skillicons.dev/icons?i=python,js,ts,lua,react,nodejs,git,github,vscode,linux,docker,figma&perline=6&theme=dark" /></a>
+
+</div>
+
+---
+
+## 🧩 Projects
+
+<div align="center">
+
+### ⚡ Elera AI
 
 <table>
   <tr>
-    <td width="50%">
-      <h3 align="center">Elera AI</h3>
-      <p align="center">
-        AI-powered creative editing platform<br/>
-        <em>Reimagining creative workflows with generative AI</em>
+    <td width="60%">
+      <p>
+        <strong>Elera AI</strong> is an AI-powered creative editing platform I'm building from the ground up.<br/><br/>
+        ✦ Reimagining creative workflows with generative AI<br/>
+        ✦ AI-assisted editing, design, and content creation<br/>
+        ✦ Making powerful creative tools accessible to everyone<br/><br/>
+        <strong>Tech Stack:</strong> Python · JavaScript · AI/ML · Cloud
       </p>
+      <br/>
+      <a href="https://github.com/NightAI707">
+        <img src="https://img.shields.io/badge/🚀_Coming_Soon-302b63?style=for-the-badge" />
+      </a>
     </td>
-    <td width="50%">
-      <h3 align="center">AI Research & Exploration</h3>
-      <p align="center">
-        Generative AI · Intelligent Systems · AI Agents<br/>
-        <em>Pushing the boundaries of what's possible</em>
-      </p>
+    <td width="40%" align="center">
+      <img src="https://media.giphy.com/media/f3iwJFOVOwuy7K6FFw/giphy.gif" width="250"/>
     </td>
   </tr>
 </table>
 
----
-
-## 🛠️ Tech Stack
-
-<div align="center">
-
-**Languages**
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Lua](https://img.shields.io/badge/Lua-2C2D72?style=flat-square&logo=lua&logoColor=white)
-
-**AI / ML**
-
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
-
-**Tools & Platforms**
-
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-
 </div>
 
 ---
 
-## 📊 GitHub Stats
+## 🔬 Research & Exploration
 
 <div align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=NightAI707&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9&ring_color=58a6ff" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=NightAI707&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9" />
-</div>
 
-<div align="center">
-  <img width="70%" src="https://github-readme-streak-stats.herokuapp.com?user=NightAI707&theme=github-dark-blue&hide_border=true&background=0d1117&stroke=30363d&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff" />
-</div>
+<table>
+  <tr>
+    <td width="60%">
+      <p>
+        <strong>AI Research & Intelligent Systems</strong><br/><br/>
+        ✦ Exploring generative AI, LLMs, and AI agents<br/>
+        ✦ Building intelligent systems and AI-native apps<br/>
+        ✦ Pushing boundaries of what's possible with AI<br/>
+        ✦ Previously built AI products & Roblox experiences<br/><br/>
+        <strong>Interests:</strong> Gen AI · LLMs · AI Agents · Computer Vision
+      </p>
+    </td>
+    <td width="40%" align="center">
+      <img src="https://media.giphy.com/media/LaVp0AyqR5bGsC5Cbm/giphy.gif" width="250"/>
+    </td>
+  </tr>
+</table>
 
----
-
-## 🐍 Contribution Graph
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=NightAI707&bg_color=0d1117&color=58a6ff&line=58a6ff&point=e6edf3&area=true&area_color=1f6feb&hide_border=true" width="95%"/>
 </div>
 
 ---
 
 <div align="center">
 
-### 💡 *"The best way to predict the future is to build it."*
+## 📊 GitHub Stats & Top Languages
 
 <br/>
 
-![Profile Views](https://komarev.com/ghpvc/?username=NightAI707&color=1f6feb&style=flat-square&label=Profile+Views)
+### 📈 NightAI707's GitHub Stats
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:1f6feb&height=120&section=footer" />
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=NightAI707&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=a978ff&icon_color=a978ff&text_color=c9d1d9&ring_color=a978ff&count_private=true" />
+<img width="49%" src="https://github-readme-streak-stats.herokuapp.com?user=NightAI707&theme=tokyonight&hide_border=true&background=0d1117&stroke=302b63&ring=a978ff&fire=a978ff&currStreakLabel=a978ff&sideLabels=c9d1d9&dates=8b949e" />
+
+<br/><br/>
+
+### 📊 Most Used Languages
+
+<img width="40%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=NightAI707&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=a978ff&text_color=c9d1d9" />
+
+<br/><br/>
+
+<!-- Activity Graph -->
+<img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=NightAI707&bg_color=0d1117&color=a978ff&line=a978ff&point=e6edf3&area=true&area_color=302b63&hide_border=true&custom_title=Contribution%20Graph" />
+
+</div>
+
+---
+
+<div align="center">
+
+## ☕ Support Me
+
+<br/>
+
+<a href="https://www.linkedin.com/in/night-edge-667aa32b4/">
+  <img src="https://img.shields.io/badge/Let's_Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+
+</div>
+
+---
+
+<div align="center">
+
+## 🙏 Thanks for visiting my profile!
+
+<br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&duration=3000&pause=1500&color=A978FF&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=70&lines=I+appreciate+you+stopping+by+and+checking+out+my+work!;Feel+free+to+connect+%E2%80%94+let's+follow+and+build+together.;Happy+Coding!+%F0%9F%9A%80" />
+
+<br/><br/>
+
+![Profile Views](https://komarev.com/ghpvc/?username=NightAI707&color=a978ff&style=flat-square&label=Profile+Views)
+
+<br/>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,30:161b22,60:1a1b2e,100:302b63&height=120&section=footer" />
 
 </div>
