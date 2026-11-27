@@ -1,6 +1,17 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/apple-hero.jpg?v=4" alt="Night Edge" width="100%" />
+<br/>
+
+<h1>Night Edge</h1>
+
+<h4>AI Engineer &nbsp;·&nbsp; Founder at Elera AI &nbsp;·&nbsp; IIT Patna</h4>
+
+<p>
+  Building AI-powered creative tools and intelligent systems.<br/>
+  Previously shipped AI products, Roblox experiences, and research prototypes across Python, TypeScript, and Lua.
+</p>
+
+<br/>
 
 <img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/dynamic-island-v5.svg" alt="Dynamic Island Live Activity" width="100%" />
 
