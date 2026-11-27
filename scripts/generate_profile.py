@@ -161,8 +161,8 @@ def compute_metrics(data: dict) -> dict:
 
 
 def build_dynamic_island(m: dict) -> str:
-    w, h = 840, 74
-    pw, ph = 680, 62
+    w, h = 840, 80
+    pw, ph = 700, 68
     px, py = (w - pw) / 2, (h - ph) / 2
     r = ph / 2
 
@@ -183,70 +183,52 @@ def build_dynamic_island(m: dict) -> str:
         bx = 396 + i * 7.5
         by = h / 2 - bh / 2
         bars_svg.append(
-            f'<rect x="{bx:.1f}" y="{by:.1f}" width="3.6" height="{bh}" rx="1.8" fill="{col}">'
+            f'<rect x="{bx:.1f}" y="{by:.1f}" width="3.8" height="{bh}" rx="1.9" fill="{col}">'
             f'<animate attributeName="height" values="{bh};{max(6, bh-10)};{bh}" dur="{1.05 + i*0.14:.2f}s" repeatCount="indefinite"/>'
             f'<animate attributeName="y" values="{by:.1f};{h/2 - max(6, bh-10)/2:.1f};{by:.1f}" dur="{1.05 + i*0.14:.2f}s" repeatCount="indefinite"/>'
             f'</rect>'
         )
 
     streak_frac = min(1.0, max(0.16, m["current_streak"] / 14.0))
-    ring_r = 13
+    ring_r = 14
     circ = 2 * math.pi * ring_r
     dash = circ * streak_frac
 
     logo_elem = (
-        f'<image href="data:image/png;base64,{logo_b64}" x="{px + 42:.1f}" y="{py + 9:.1f}" width="62" height="25"/>'
+        f'<image href="data:image/png;base64,{logo_b64}" x="{px + 48:.1f}" y="{py + 12:.1f}" width="62" height="25"/>'
         if logo_b64
-        else f'<text x="{px + 42:.1f}" y="{py + 28:.1f}" font-family="{FONT_SANS}" font-size="14" font-weight="600" fill="#f5f5f7">Elera AI</text>'
+        else f'<text x="{px + 48:.1f}" y="{py + 30:.1f}" font-family="{FONT_SANS}" font-size="14" font-weight="600" fill="#ffffff">Elera AI</text>'
     )
 
     return f"""<svg fill="none" viewBox="0 0 {w} {h}" width="100%" xmlns="http://www.w3.org/2000/svg">
   {COMMON_DEFS}
   <defs>
-    <clipPath id="diClip">
-      <rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="{r}"/>
-    </clipPath>
-    <linearGradient id="diGlassRim" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.52"/>
-      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.14"/>
-      <stop offset="75%" stop-color="#ffffff" stop-opacity="0.28"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.72"/>
+    <linearGradient id="diBoldRim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#52525b"/>
+      <stop offset="50%" stop-color="#27272a"/>
+      <stop offset="100%" stop-color="#3f3f46"/>
     </linearGradient>
-    <radialGradient id="diGlowL" cx="15%" cy="95%" r="40%">
-      <stop offset="0%" stop-color="#30d158" stop-opacity="0.32"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="diGlowR" cx="85%" cy="95%" r="40%">
-      <stop offset="0%" stop-color="#0a84ff" stop-opacity="0.34"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
-    </radialGradient>
   </defs>
 
-  <!-- Liquid Glass Dynamic Island Capsule -->
-  <g clip-path="url(#diClip)">
-    <rect x="{px}" y="{py}" width="{pw}" height="{ph}" fill="#050507"/>
-    <rect x="{px}" y="{py}" width="{pw}" height="{ph}" fill="url(#diGlowL)"/>
-    <rect x="{px}" y="{py}" width="{pw}" height="{ph}" fill="url(#diGlowR)"/>
-    <ellipse cx="{w/2}" cy="{py + 6}" rx="{pw*0.42}" ry="10" fill="#ffffff" fill-opacity="0.07"/>
-  </g>
-  <rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="{r}" fill="none" stroke="url(#diGlassRim)" stroke-width="1.3"/>
+  <!-- Pure Black Dynamic Island with Thick Bold Border -->
+  <rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="{r}" fill="#000000" stroke="url(#diBoldRim)" stroke-width="3"/>
 
   <!-- Left: Live Dot + Elera Script Logo + Subtitle -->
-  <circle cx="{px + 26}" cy="{h/2}" r="4.5" fill="#30d158" filter="url(#softGlow)">
+  <circle cx="{px + 30}" cy="{h/2}" r="4.8" fill="#30d158">
     <animate attributeName="opacity" values="1;0.35;1" dur="2.2s" repeatCount="indefinite"/>
   </circle>
   {logo_elem}
-  <text x="{px + 42}" y="{py + 49}" font-family="{FONT_MONO}" font-size="10" fill="#8e8e93">In Active Development</text>
+  <text x="{px + 48}" y="{py + 52}" font-family="{FONT_MONO}" font-size="10.5" fill="#8e8e93">In Active Development</text>
 
   <!-- Center: Apple Waveform -->
   {''.join(bars_svg)}
 
   <!-- Right: Streak + Activity Ring -->
-  <text x="{px + pw - 52}" y="{py + 28}" text-anchor="end" font-family="{FONT_SANS}" font-size="13" font-weight="600" fill="#f5f5f7">{m['current_streak']}d Streak</text>
-  <text x="{px + pw - 52}" y="{py + 46}" text-anchor="end" font-family="{FONT_MONO}" font-size="10.5" fill="#8e8e93">{m['total']} commits</text>
-  <circle cx="{px + pw - 28}" cy="{h/2}" r="{ring_r}" stroke="#1c1c1e" stroke-width="3.6" fill="none"/>
-  <circle cx="{px + pw - 28}" cy="{h/2}" r="{ring_r}" stroke="#0a84ff" stroke-width="3.6" stroke-linecap="round" fill="none"
-          stroke-dasharray="{dash:.1f} {circ:.1f}" transform="rotate(-90 {px + pw - 28} {h/2})"/>
+  <text x="{px + pw - 58}" y="{py + 30}" text-anchor="end" font-family="{FONT_SANS}" font-size="13.5" font-weight="600" fill="#ffffff">{m['current_streak']}d Streak</text>
+  <text x="{px + pw - 58}" y="{py + 49}" text-anchor="end" font-family="{FONT_MONO}" font-size="10.5" fill="#8e8e93">{m['total']} commits</text>
+  <circle cx="{px + pw - 32}" cy="{h/2}" r="{ring_r}" stroke="#1c1c1e" stroke-width="3.8" fill="none"/>
+  <circle cx="{px + pw - 32}" cy="{h/2}" r="{ring_r}" stroke="#0a84ff" stroke-width="3.8" stroke-linecap="round" fill="none"
+          stroke-dasharray="{dash:.1f} {circ:.1f}" transform="rotate(-90 {px + pw - 32} {h/2})"/>
 </svg>
 """
 
@@ -576,7 +558,7 @@ def main():
     m = compute_metrics(data)
 
     outputs = {
-        "dynamic-island-v2.svg": build_dynamic_island(m),
+        "dynamic-island-v3.svg": build_dynamic_island(m),
         "widget-bio.svg": build_bio_widget(),
         "widget-commits-mesh.svg": build_counter_widget(m),
         "widget-rings.svg": build_rings_widget(m),

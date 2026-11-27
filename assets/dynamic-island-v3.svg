@@ -1,0 +1,60 @@
+<svg fill="none" viewBox="0 0 840 80" width="100%" xmlns="http://www.w3.org/2000/svg">
+  
+  <defs>
+    <linearGradient id="cardDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#16161a"/>
+      <stop offset="100%" stop-color="#0b0b0d"/>
+    </linearGradient>
+    <linearGradient id="cardRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.24"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.14"/>
+    </linearGradient>
+    <linearGradient id="meshWarm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff2d55"/>
+      <stop offset="52%" stop-color="#ff6b35"/>
+      <stop offset="100%" stop-color="#ffd166"/>
+    </linearGradient>
+    <linearGradient id="tideArea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a84ff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#0a84ff" stop-opacity="0.0"/>
+    </linearGradient>
+    <radialGradient id="stackSpot" cx="50%" cy="48%" r="46%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.34"/>
+      <stop offset="55%" stop-color="#1d4ed8" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <defs>
+    <linearGradient id="diBoldRim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#52525b"/>
+      <stop offset="50%" stop-color="#27272a"/>
+      <stop offset="100%" stop-color="#3f3f46"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Pure Black Dynamic Island with Thick Bold Border -->
+  <rect x="70.0" y="6.0" width="700" height="68" rx="34.0" fill="#000000" stroke="url(#diBoldRim)" stroke-width="3"/>
+
+  <!-- Left: Live Dot + Elera Script Logo + Subtitle -->
+  <circle cx="100.0" cy="40.0" r="4.8" fill="#30d158">
+    <animate attributeName="opacity" values="1;0.35;1" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <image href="data:image/png;base64,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" x="118.0" y="18.0" width="62" height="25"/>
+  <text x="118.0" y="58.0" font-family="'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="10.5" fill="#8e8e93">In Active Development</text>
+
+  <!-- Center: Apple Waveform -->
+  <rect x="396.0" y="36.0" width="3.8" height="8" rx="1.9" fill="#ff2d55"><animate attributeName="height" values="8;6;8" dur="1.05s" repeatCount="indefinite"/><animate attributeName="y" values="36.0;37.0;36.0" dur="1.05s" repeatCount="indefinite"/></rect><rect x="403.5" y="32.0" width="3.8" height="16" rx="1.9" fill="#ff5e3a"><animate attributeName="height" values="16;6;16" dur="1.19s" repeatCount="indefinite"/><animate attributeName="y" values="32.0;37.0;32.0" dur="1.19s" repeatCount="indefinite"/></rect><rect x="411.0" y="27.0" width="3.8" height="26" rx="1.9" fill="#ff9f0a"><animate attributeName="height" values="26;16;26" dur="1.33s" repeatCount="indefinite"/><animate attributeName="y" values="27.0;32.0;27.0" dur="1.33s" repeatCount="indefinite"/></rect><rect x="418.5" y="33.0" width="3.8" height="14" rx="1.9" fill="#30d158"><animate attributeName="height" values="14;6;14" dur="1.47s" repeatCount="indefinite"/><animate attributeName="y" values="33.0;37.0;33.0" dur="1.47s" repeatCount="indefinite"/></rect><rect x="426.0" y="28.0" width="3.8" height="24" rx="1.9" fill="#0a84ff"><animate attributeName="height" values="24;14;24" dur="1.61s" repeatCount="indefinite"/><animate attributeName="y" values="28.0;33.0;28.0" dur="1.61s" repeatCount="indefinite"/></rect><rect x="433.5" y="31.0" width="3.8" height="18" rx="1.9" fill="#bf5af2"><animate attributeName="height" values="18;8;18" dur="1.75s" repeatCount="indefinite"/><animate attributeName="y" values="31.0;36.0;31.0" dur="1.75s" repeatCount="indefinite"/></rect><rect x="441.0" y="35.0" width="3.8" height="10" rx="1.9" fill="#ff2d55"><animate attributeName="height" values="10;6;10" dur="1.89s" repeatCount="indefinite"/><animate attributeName="y" values="35.0;37.0;35.0" dur="1.89s" repeatCount="indefinite"/></rect>
+
+  <!-- Right: Streak + Activity Ring -->
+  <text x="712.0" y="36.0" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif" font-size="13.5" font-weight="600" fill="#ffffff">0d Streak</text>
+  <text x="712.0" y="55.0" text-anchor="end" font-family="'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="10.5" fill="#8e8e93">3 commits</text>
+  <circle cx="738.0" cy="40.0" r="14" stroke="#1c1c1e" stroke-width="3.8" fill="none"/>
+  <circle cx="738.0" cy="40.0" r="14" stroke="#0a84ff" stroke-width="3.8" stroke-linecap="round" fill="none"
+          stroke-dasharray="14.1 88.0" transform="rotate(-90 738.0 40.0)"/>
+</svg>
