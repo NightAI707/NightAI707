@@ -439,67 +439,80 @@ def build_telemetry_row(m: dict) -> str:
 
 
 def build_stack_spotlight() -> str:
-    # Apple Creator Studio 2x5 squircle icon grid with labels underneath each squircle
-    w, h = 840, 340
-    tiles = [
-        ("Python", "#3776AB", '<path fill="#3776AB" d="M11.9 2C7.3 2 7.6 4 7.6 4v2.1h4.4v.6H5.8S2.5 6.3 2.5 11s2.9 4.5 2.9 4.5h1.7v-2.2s-.1-2.9 2.8-2.9h4.6s2.6 0 2.6-2.5V4.4S17.5 2 11.9 2zm-2.5 1.4a.8.8 0 1 1 0 1.6.8.8 0 0 1 0-1.6z"/><path fill="#FFD43B" d="M12.1 22c4.6 0 4.3-2 4.3-2v-2.1H12v-.6h6.2s3.3.4 3.3-4.3-2.9-4.5-2.9-4.5h-1.7v2.2s.1 2.9-2.8 2.9H9.5s-2.6 0-2.6 2.5v3.5S6.5 22 12.1 22zm2.5-1.4a.8.8 0 1 1 0-1.6.8.8 0 0 1 0 1.6z"/>'),
-        ("TypeScript", "#3178C6", '<rect x="2" y="2" width="20" height="20" rx="4" fill="#3178C6"/><path fill="#ffffff" d="M13.5 12.6H11v6.9H9.1v-6.9H6.6V11h6.9v1.6zm1.1 5.1c.6.4 1.4.6 2.2.6.9 0 1.5-.3 1.5-.9 0-.5-.4-.8-1.4-1.2-1.5-.5-2.4-1.2-2.4-2.5 0-1.5 1.2-2.5 3.1-2.5.9 0 1.7.2 2.2.5l-.5 1.5c-.4-.2-1-.4-1.7-.4-.8 0-1.3.3-1.3.8 0 .5.4.8 1.5 1.2 1.6.6 2.3 1.3 2.3 2.6 0 1.5-1.1 2.6-3.4 2.6-1 0-2-.3-2.6-.7l.5-1.6z"/>'),
-        ("JavaScript", "#F7DF1E", '<rect x="2" y="2" width="20" height="20" rx="4" fill="#F7DF1E"/><path fill="#000000" d="M10.8 16.9c0 1.6-.9 2.4-2.3 2.4-1 0-1.7-.5-2.1-1.2l1.3-.8c.2.4.5.6.9.6.5 0 .8-.2.8-1v-5.3h1.4v5.3zm2.6.2c.4.6.9 1 1.7 1 .7 0 1.2-.3 1.2-.8 0-.5-.4-.7-1.2-1.1l-.4-.2c-1.2-.5-2-1.1-2-2.4 0-1.2.9-2.1 2.4-2.1 1 0 1.8.4 2.3 1.3l-1.2.8c-.3-.5-.6-.7-1.1-.7-.5 0-.8.3-.8.7 0 .5.3.7 1.1 1l.4.2c1.4.6 2.2 1.2 2.2 2.5 0 1.4-1.1 2.2-2.6 2.2-1.5 0-2.4-.7-2.9-1.6l1.3-.8z"/>'),
-        ("PyTorch", "#EE4C2C", '<path fill="#EE4C2C" d="M12 2.2L6.3 7.9a8 8 0 1 0 11.4 0l-1.8 1.8a5.5 5.5 0 1 1-7.8 0L12 5.8V2.2z"/><circle cx="15.5" cy="6.2" r="1.5" fill="#EE4C2C"/>'),
-        ("TensorFlow", "#FF6F00", '<path fill="#FF6F00" d="M12 2L3.5 6.8v3.6l5-2.8v11.6l3.5 2V7.8l5 2.8v3.6l3.5-2V6.8L12 2zm3.5 9.8v3.4l2.8-1.6v-3.4l-2.8 1.6z"/>'),
-        ("React", "#61DAFB", '<circle cx="12" cy="12" r="2.2" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="9.5" ry="3.7" stroke="#61DAFB" stroke-width="1.4" fill="none"/><ellipse cx="12" cy="12" rx="9.5" ry="3.7" transform="rotate(60 12 12)" stroke="#61DAFB" stroke-width="1.4" fill="none"/><ellipse cx="12" cy="12" rx="9.5" ry="3.7" transform="rotate(120 12 12)" stroke="#61DAFB" stroke-width="1.4" fill="none"/>'),
-        ("Next.js", "#FFFFFF", '<circle cx="12" cy="12" r="9.5" fill="#000000" stroke="#ffffff" stroke-width="1.4"/><path d="M8.5 16V8l8.2 10.5M15.5 8v4.8" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>'),
-        ("Node.js", "#539E43", '<path fill="#539E43" d="M12 2l8.6 5v10L12 22l-8.6-5V7L12 2zm0 2.5L5.6 8.2v7.6L12 19.5l6.4-3.7V8.2L12 4.5z"/><path fill="#539E43" d="M12 8.2l3.8 2.2v3.2L12 15.8l-3.8-2.2v-3.2L12 8.2z"/>'),
-        ("Docker", "#2496ED", '<path fill="#2496ED" d="M13 8h2v2h-2V8zm-3 0h2v2h-2V8zm0-3h2v2h-2V5zm-3 3h2v2H7V8zm-3 0h2v2H4V8zm3-3h2v2H7V5zm14.5 5.4c-.5-.4-1.6-.5-2.3-.3-.2-1.3-1-2.3-2-2.8l-.4-.2-.2.4c-.3.6-.4 1.5-.1 2.2.2.5.6.9 1 1.2H2.2l-.1.6c-.2 1.8.3 3.7 1.4 5 1.1 1.3 2.8 2 4.9 2 4.4 0 7.7-2 9.4-5.7.6 0 2-.1 2.7-1.3.1-.1.5-.8.2-1.1z"/>'),
-        ("Git", "#F05032", '<path fill="#F05032" d="M21.6 11.1L12.9 2.4a1.3 1.3 0 0 0-1.8 0L9.3 4.2l2.3 2.3a1.5 1.5 0 0 1 1.9 1.9l2.2 2.2a1.5 1.5 0 1 1-.9.9l-2.1-2.1v5.5a1.5 1.5 0 1 1-1.2 0V9.3a1.5 1.5 0 0 1-.8-2L8.4 5 2.4 11a1.3 1.3 0 0 0 0 1.8l8.7 8.7a1.3 1.3 0 0 0 1.8 0l8.7-8.7a1.3 1.3 0 0 0 0-1.7z"/>'),
+    # Apple App Store full-width staggered squircle icon mosaic (no top logo, just "Core Stack" + full-bleed colored app icons)
+    w, h = 840, 310
+    icons = [
+        ("#1e3a5f", "#0f172a", '<path fill="#3776AB" d="M11.9 2C7.3 2 7.6 4 7.6 4v2.1h4.4v.6H5.8S2.5 6.3 2.5 11s2.9 4.5 2.9 4.5h1.7v-2.2s-.1-2.9 2.8-2.9h4.6s2.6 0 2.6-2.5V4.4S17.5 2 11.9 2zm-2.5 1.4a.8.8 0 1 1 0 1.6.8.8 0 0 1 0-1.6z"/><path fill="#FFD43B" d="M12.1 22c4.6 0 4.3-2 4.3-2v-2.1H12v-.6h6.2s3.3.4 3.3-4.3-2.9-4.5-2.9-4.5h-1.7v2.2s.1 2.9-2.8 2.9H9.5s-2.6 0-2.6 2.5v3.5S6.5 22 12.1 22zm2.5-1.4a.8.8 0 1 1 0-1.6.8.8 0 0 1 0-1.6z"/>'),
+        ("#3178C6", "#1d4ed8", '<path fill="#ffffff" d="M13.5 12.6H11v6.9H9.1v-6.9H6.6V11h6.9v1.6zm1.1 5.1c.6.4 1.4.6 2.2.6.9 0 1.5-.3 1.5-.9 0-.5-.4-.8-1.4-1.2-1.5-.5-2.4-1.2-2.4-2.5 0-1.5 1.2-2.5 3.1-2.5.9 0 1.7.2 2.2.5l-.5 1.5c-.4-.2-1-.4-1.7-.4-.8 0-1.3.3-1.3.8 0 .5.4.8 1.5 1.2 1.6.6 2.3 1.3 2.3 2.6 0 1.5-1.1 2.6-3.4 2.6-1 0-2-.3-2.6-.7l.5-1.6z"/>'),
+        ("#F7DF1E", "#eab308", '<path fill="#000000" d="M10.8 16.9c0 1.6-.9 2.4-2.3 2.4-1 0-1.7-.5-2.1-1.2l1.3-.8c.2.4.5.6.9.6.5 0 .8-.2.8-1v-5.3h1.4v5.3zm2.6.2c.4.6.9 1 1.7 1 .7 0 1.2-.3 1.2-.8 0-.5-.4-.7-1.2-1.1l-.4-.2c-1.2-.5-2-1.1-2-2.4 0-1.2.9-2.1 2.4-2.1 1 0 1.8.4 2.3 1.3l-1.2.8c-.3-.5-.6-.7-1.1-.7-.5 0-.8.3-.8.7 0 .5.3.7 1.1 1l.4.2c1.4.6 2.2 1.2 2.2 2.5 0 1.4-1.1 2.2-2.6 2.2-1.5 0-2.4-.7-2.9-1.6l1.3-.8z"/>'),
+        ("#EE4C2C", "#c2410c", '<path fill="#ffffff" d="M12 2.2L6.3 7.9a8 8 0 1 0 11.4 0l-1.8 1.8a5.5 5.5 0 1 1-7.8 0L12 5.8V2.2z"/><circle cx="15.5" cy="6.2" r="1.5" fill="#ffffff"/>'),
+        ("#FF6F00", "#ea580c", '<path fill="#ffffff" d="M12 2L3.5 6.8v3.6l5-2.8v11.6l3.5 2V7.8l5 2.8v3.6l3.5-2V6.8L12 2zm3.5 9.8v3.4l2.8-1.6v-3.4l-2.8 1.6z"/>'),
+        ("#0f172a", "#0284c7", '<circle cx="12" cy="12" r="2.2" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="9.5" ry="3.7" stroke="#61DAFB" stroke-width="1.4" fill="none"/><ellipse cx="12" cy="12" rx="9.5" ry="3.7" transform="rotate(60 12 12)" stroke="#61DAFB" stroke-width="1.4" fill="none"/><ellipse cx="12" cy="12" rx="9.5" ry="3.7" transform="rotate(120 12 12)" stroke="#61DAFB" stroke-width="1.4" fill="none"/>'),
+        ("#18181b", "#09090b", '<circle cx="12" cy="12" r="9.5" fill="none" stroke="#ffffff" stroke-width="1.5"/><path d="M8.5 16V8l8.2 10.5M15.5 8v4.8" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>'),
+        ("#22c55e", "#15803d", '<path fill="#ffffff" d="M12 2l8.6 5v10L12 22l-8.6-5V7L12 2zm0 2.5L5.6 8.2v7.6L12 19.5l6.4-3.7V8.2L12 4.5z"/><path fill="#ffffff" d="M12 8.2l3.8 2.2v3.2L12 15.8l-3.8-2.2v-3.2L12 8.2z"/>'),
+        ("#0ea5e9", "#0369a1", '<path fill="#ffffff" d="M13 8h2v2h-2V8zm-3 0h2v2h-2V8zm0-3h2v2h-2V5zm-3 3h2v2H7V8zm-3 0h2v2H4V8zm3-3h2v2H7V5zm14.5 5.4c-.5-.4-1.6-.5-2.3-.3-.2-1.3-1-2.3-2-2.8l-.4-.2-.2.4c-.3.6-.4 1.5-.1 2.2.2.5.6.9 1 1.2H2.2l-.1.6c-.2 1.8.3 3.7 1.4 5 1.1 1.3 2.8 2 4.9 2 4.4 0 7.7-2 9.4-5.7.6 0 2-.1 2.7-1.3.1-.1.5-.8.2-1.1z"/>'),
+        ("#f97316", "#dc2626", '<path fill="#ffffff" d="M21.6 11.1L12.9 2.4a1.3 1.3 0 0 0-1.8 0L9.3 4.2l2.3 2.3a1.5 1.5 0 0 1 1.9 1.9l2.2 2.2a1.5 1.5 0 1 1-.9.9l-2.1-2.1v5.5a1.5 1.5 0 1 1-1.2 0V9.3a1.5 1.5 0 0 1-.8-2L8.4 5 2.4 11a1.3 1.3 0 0 0 0 1.8l8.7 8.7a1.3 1.3 0 0 0 1.8 0l8.7-8.7a1.3 1.3 0 0 0 0-1.7z"/>'),
+        ("#4f46e5", "#312e81", '<circle cx="12" cy="12.5" r="8" fill="#ffffff" fill-opacity="0.18" stroke="#ffffff" stroke-width="1.5"/><circle cx="14.5" cy="9.5" r="2.2" fill="#ffffff"/><circle cx="19" cy="5.5" r="2" fill="#67e8f9"/>'),
+        ("#10b981", "#047857", '<path fill="#ffffff" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5h-2v-2h2zm0-4h-2V7h2z"/>'),
+        ("#38bdf8", "#0284c7", '<path fill="#ffffff" d="M12 6c-3 0-4.8 1.5-5.5 4.5 1.1-1.5 2.4-2 3.8-1.7.8.2 1.4.8 2.1 1.5 1.1 1.1 2.3 2.4 5.1 2.4 3 0 4.8-1.5 5.5-4.5-1.1 1.5-2.4 2-3.8 1.7-.8-.2-1.4-.8-2.1-1.5C16 7.3 14.8 6 12 6zm-5.5 6.8c-3 0-4.8 1.5-5.5 4.5 1.1-1.5 2.4-2 3.8-1.7.8.2 1.4.8 2.1 1.5 1.1 1.1 2.3 2.4 5.1 2.4 3 0 4.8-1.5 5.5-4.5-1.1 1.5-2.4 2-3.8 1.7-.8-.2-1.4-.8-2.1-1.5-1.1-1.1-2.3-2.4-5.1-2.4z"/>'),
+        ("#f43f5e", "#be123c", '<path fill="#ffffff" d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.5L19.5 8.5 12 12.5 4.5 8.5 12 4.5z"/>'),
+        ("#eab308", "#ca8a04", '<circle cx="12" cy="12" r="8" fill="#18181b"/><circle cx="9.5" cy="10.5" r="1.3" fill="#ffffff"/><circle cx="14.5" cy="10.5" r="1.3" fill="#ffffff"/><path d="M8.5 14.5c1 1.5 2.2 2 3.5 2s2.5-.5 3.5-2" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>'),
+        ("#8b5cf6", "#6d28d9", '<path fill="#ffffff" d="M21 4L12 21 3 4l9 3 9-3z"/>'),
+        ("#007ACC", "#005299", '<path fill="#ffffff" d="M21 3.5L16.8 1.5 9.2 8.8 5.2 5.8 3.2 7.2l4.2 3.8-4.2 3.8 2 1.4 4-3 7.6 7.3 4.2-2V3.5zm-4.2 11.7L12.5 12l4.3-3.2v6.4z"/>'),
+        ("#27272a", "#18181b", '<path fill="#ffffff" d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/>'),
+        ("#ec4899", "#db2777", '<circle cx="9.5" cy="7.5" r="2.5" fill="#ffffff"/><circle cx="14.5" cy="7.5" r="2.5" fill="#ffffff" fill-opacity="0.7"/><circle cx="9.5" cy="12.5" r="2.5" fill="#ffffff" fill-opacity="0.85"/><circle cx="14.5" cy="12.5" r="2.5" fill="#ffffff"/><circle cx="9.5" cy="17.5" r="2.5" fill="#ffffff"/>'),
+        ("#06b6d4", "#0e7490", '<path fill="#ffffff" d="M18.5 10.5A6.5 6.5 0 0 0 6.2 8.2 5 5 0 0 0 6.5 18h11.5a4 4 0 0 0 .5-7.5z"/>'),
     ]
-    sq = 92
-    gap_x = 56
-    gap_y = 48
-    sx = (w - (5 * sq + 4 * gap_x)) / 2
-    sy = 68
+
+    sq = 72
+    gap_x = 12
+    gap_y = 12
+    total_w = 10 * sq + 9 * gap_x
+    sx = (w - total_w) / 2
+    col_offsets = [24, 6, 32, 10, 26, 2, 22, 8, 28, 14]
 
     defs_extra = []
-    tile_svg = []
-    for i, (name, tint, icon_paths) in enumerate(tiles):
-        r = i // 5
-        c = i % 5
-        tx = sx + c * (sq + gap_x)
-        ty = sy + r * (sq + gap_y)
-        ix = tx + (sq - 48) / 2
-        iy = ty + (sq - 48) / 2
-        uid = f"sq_{i}"
-        defs_extra.append(
-            f'<radialGradient id="{uid}" cx="50%" cy="55%" r="55%">'
-            f'<stop offset="0%" stop-color="{tint}" stop-opacity="0.16"/>'
-            f'<stop offset="100%" stop-color="#0a0a0c" stop-opacity="0"/>'
-            f'</radialGradient>'
-        )
-        tile_svg.append(
-            f'<g>'
-            f'<rect x="{tx:.1f}" y="{ty:.1f}" width="{sq}" height="{sq}" rx="22" fill="#141417" stroke="url(#sqRim)" stroke-width="1.2"/>'
-            f'<rect x="{tx:.1f}" y="{ty:.1f}" width="{sq}" height="{sq}" rx="22" fill="url(#{uid})"/>'
-            f'<line x1="{tx+18:.1f}" y1="{ty+1:.1f}" x2="{tx+sq-18:.1f}" y2="{ty+1:.1f}" stroke="#ffffff" stroke-opacity="0.32" stroke-width="0.9"/>'
-            f'<svg x="{ix:.1f}" y="{iy:.1f}" width="48" height="48" viewBox="0 0 24 24">{icon_paths}</svg>'
-            f'<text x="{tx + sq/2:.1f}" y="{ty + sq + 22:.1f}" text-anchor="middle" font-family="{FONT_SANS}" font-size="13" font-weight="500" fill="#d1d1d6">{esc(name)}</text>'
-            f'</g>'
-        )
+    tiles_svg = []
+    for col in range(10):
+        tx = sx + col * (sq + gap_x)
+        base_y = 112 + col_offsets[col]
+        for row in range(2):
+            idx = col + row * 10
+            bg1, bg2, ipath = icons[idx]
+            ty = base_y + row * (sq + gap_y)
+            uid = f"app_{idx}"
+            defs_extra.append(
+                f'<linearGradient id="{uid}" x1="0%" y1="0%" x2="100%" y2="100%">'
+                f'<stop offset="0%" stop-color="{bg1}"/>'
+                f'<stop offset="100%" stop-color="{bg2}"/>'
+                f'</linearGradient>'
+            )
+            ix = tx + (sq - 40) / 2
+            iy = ty + (sq - 40) / 2
+            tiles_svg.append(
+                f'<rect x="{tx:.1f}" y="{ty:.1f}" width="{sq}" height="{sq}" rx="18" fill="url(#{uid})" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>'
+                f'<svg x="{ix:.1f}" y="{iy:.1f}" width="40" height="40" viewBox="0 0 24 24">{ipath}</svg>'
+            )
 
     return f"""<svg fill="none" viewBox="0 0 {w} {h}" width="100%" xmlns="http://www.w3.org/2000/svg">
   {COMMON_DEFS}
   <defs>
-    <linearGradient id="sqRim" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.10"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.22"/>
+    <clipPath id="stackClip">
+      <rect x="1" y="1" width="{w-2}" height="{h-2}" rx="28"/>
+    </clipPath>
+    <linearGradient id="bottomFade" x1="0%" y1="75%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.85"/>
     </linearGradient>
     {''.join(defs_extra)}
   </defs>
-  <rect x="1" y="1" width="{w-2}" height="{h-2}" rx="28" fill="#050507" stroke="url(#cardRim)" stroke-width="1.1"/>
-  <rect x="1" y="1" width="{w-2}" height="{h-2}" rx="28" fill="url(#stackSpot)"/>
-  <line x1="28" y1="2" x2="{w-28}" y2="2" stroke="#ffffff" stroke-opacity="0.24" stroke-width="0.9"/>
-  <text x="{w/2}" y="42" text-anchor="middle" font-family="{FONT_SANS}" font-size="22" font-weight="600" letter-spacing="-0.4" fill="#f5f5f7">Core Stack</text>
-  {''.join(tile_svg)}
+  <g clip-path="url(#stackClip)">
+    <rect width="{w}" height="{h}" fill="#000000"/>
+    <text x="{w/2}" y="68" text-anchor="middle" font-family="{FONT_SANS}" font-size="36" font-weight="700" letter-spacing="-1" fill="#ffffff">Core Stack</text>
+    {''.join(tiles_svg)}
+    <rect width="{w}" height="{h}" fill="url(#bottomFade)"/>
+  </g>
+  <rect x="1" y="1" width="{w-2}" height="{h-2}" rx="28" fill="none" stroke="url(#cardRim)" stroke-width="1.2"/>
 </svg>
 """
 
@@ -563,7 +576,7 @@ def main():
         "widget-commits-mesh.svg": build_counter_widget(m),
         "widget-rings.svg": build_rings_widget(m),
         "widget-telemetry.svg": build_telemetry_row(m),
-        "widget-creator-stack-v2.svg": build_stack_spotlight(),
+        "widget-appstore-stack.svg": build_stack_spotlight(),
         "link-elera.svg": build_link_pill("Elera AI", "#ff5e3a", "#ffd166"),
         "link-linkedin.svg": build_link_pill("LinkedIn", "#0a84ff", "#bf5af2"),
         "link-x.svg": build_link_pill("X  @NightEdge707", "#30d158", "#64d2ff"),
