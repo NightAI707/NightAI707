@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/apple-hero.jpg?v=4" alt="Night Edge" width="100%" />
 
-<img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/dynamic-island-v3.svg" alt="Dynamic Island Live Activity" width="100%" />
+<img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/dynamic-island-v4.svg" alt="Dynamic Island Live Activity" width="100%" />
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/NightAI707/NightAI707/main/assets/widget-bio.svg?v=4" alt="About Night Edge" width="48.5%" />

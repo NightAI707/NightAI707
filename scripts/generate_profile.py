@@ -161,74 +161,64 @@ def compute_metrics(data: dict) -> dict:
 
 
 def build_dynamic_island(m: dict) -> str:
-    w, h = 840, 80
-    pw, ph = 700, 68
+    w, h = 840, 72
+    pw, ph = 460, 56
     px, py = (w - pw) / 2, (h - ph) / 2
     r = ph / 2
 
-    # Load resized Elera script logo as base64 PNG
     logo_path = os.path.join(OUT_DIR, "elera-logo.png")
     logo_b64 = ""
     if os.path.exists(logo_path):
         with open(logo_path, "rb") as lf:
             logo_b64 = base64.b64encode(lf.read()).decode("ascii")
 
-    # Multi-hue Apple Siri/Audio waveform bars
     wave_bars = [
-        (8, "#ff2d55"), (16, "#ff5e3a"), (26, "#ff9f0a"),
-        (14, "#30d158"), (24, "#0a84ff"), (18, "#bf5af2"), (10, "#ff2d55"),
+        (8, "#ff2d55"), (16, "#ff5e3a"), (24, "#ff9f0a"),
+        (14, "#30d158"), (22, "#0a84ff"), (16, "#bf5af2"), (10, "#ff2d55"),
     ]
     bars_svg = []
+    wx0 = px + 188
     for i, (bh, col) in enumerate(wave_bars):
-        bx = 396 + i * 7.5
+        bx = wx0 + i * 7.5
         by = h / 2 - bh / 2
         bars_svg.append(
-            f'<rect x="{bx:.1f}" y="{by:.1f}" width="3.8" height="{bh}" rx="1.9" fill="{col}">'
+            f'<rect x="{bx:.1f}" y="{by:.1f}" width="3.6" height="{bh}" rx="1.8" fill="{col}">'
             f'<animate attributeName="height" values="{bh};{max(6, bh-10)};{bh}" dur="{1.05 + i*0.14:.2f}s" repeatCount="indefinite"/>'
             f'<animate attributeName="y" values="{by:.1f};{h/2 - max(6, bh-10)/2:.1f};{by:.1f}" dur="{1.05 + i*0.14:.2f}s" repeatCount="indefinite"/>'
             f'</rect>'
         )
 
-    streak_frac = min(1.0, max(0.16, m["current_streak"] / 14.0))
-    ring_r = 14
+    streak_frac = min(1.0, max(0.18, m["current_streak"] / 14.0))
+    ring_r = 12
     circ = 2 * math.pi * ring_r
     dash = circ * streak_frac
 
     logo_elem = (
-        f'<image href="data:image/png;base64,{logo_b64}" x="{px + 48:.1f}" y="{py + 12:.1f}" width="62" height="25"/>'
+        f'<image href="data:image/png;base64,{logo_b64}" x="{px + 42:.1f}" y="{h/2 - 12:.1f}" width="60" height="24"/>'
         if logo_b64
-        else f'<text x="{px + 48:.1f}" y="{py + 30:.1f}" font-family="{FONT_SANS}" font-size="14" font-weight="600" fill="#ffffff">Elera AI</text>'
+        else f'<text x="{px + 42:.1f}" y="{h/2 + 5:.1f}" font-family="{FONT_SANS}" font-size="14" font-weight="600" fill="#ffffff">Elera</text>'
     )
 
     return f"""<svg fill="none" viewBox="0 0 {w} {h}" width="100%" xmlns="http://www.w3.org/2000/svg">
   {COMMON_DEFS}
-  <defs>
-    <linearGradient id="diBoldRim" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#52525b"/>
-      <stop offset="50%" stop-color="#27272a"/>
-      <stop offset="100%" stop-color="#3f3f46"/>
-    </linearGradient>
-  </defs>
+  <!-- Compact Pure Black iPhone Dynamic Island -->
+  <rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="{r}" fill="#000000" stroke="#1c1c1e" stroke-width="1.5"/>
 
-  <!-- Pure Black Dynamic Island with Thick Bold Border -->
-  <rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="{r}" fill="#000000" stroke="url(#diBoldRim)" stroke-width="3"/>
-
-  <!-- Left: Live Dot + Elera Script Logo + Subtitle -->
-  <circle cx="{px + 30}" cy="{h/2}" r="4.8" fill="#30d158">
+  <!-- Left: Pulsing Green Dot + Centered Elera Logo -->
+  <circle cx="{px + 26}" cy="{h/2}" r="4.2" fill="#30d158">
     <animate attributeName="opacity" values="1;0.35;1" dur="2.2s" repeatCount="indefinite"/>
   </circle>
   {logo_elem}
-  <text x="{px + 48}" y="{py + 52}" font-family="{FONT_MONO}" font-size="10.5" fill="#8e8e93">In Active Development</text>
+  <text x="{px + 110}" y="{h/2 + 4:.1f}" font-family="{FONT_MONO}" font-size="10.5" fill="#636366">dev</text>
 
-  <!-- Center: Apple Waveform -->
+  <!-- Center: Multi-Hue Siri Waveform -->
   {''.join(bars_svg)}
 
-  <!-- Right: Streak + Activity Ring -->
-  <text x="{px + pw - 58}" y="{py + 30}" text-anchor="end" font-family="{FONT_SANS}" font-size="13.5" font-weight="600" fill="#ffffff">{m['current_streak']}d Streak</text>
-  <text x="{px + pw - 58}" y="{py + 49}" text-anchor="end" font-family="{FONT_MONO}" font-size="10.5" fill="#8e8e93">{m['total']} commits</text>
-  <circle cx="{px + pw - 32}" cy="{h/2}" r="{ring_r}" stroke="#1c1c1e" stroke-width="3.8" fill="none"/>
-  <circle cx="{px + pw - 32}" cy="{h/2}" r="{ring_r}" stroke="#0a84ff" stroke-width="3.8" stroke-linecap="round" fill="none"
-          stroke-dasharray="{dash:.1f} {circ:.1f}" transform="rotate(-90 {px + pw - 32} {h/2})"/>
+  <!-- Right: Commits + Activity Ring -->
+  <text x="{px + pw - 46}" y="{h/2 + 4.5:.1f}" text-anchor="end" font-family="{FONT_MONO}" font-size="11.5" font-weight="500" fill="#d1d1d6">{m['total']} commits</text>
+  <circle cx="{px + pw - 24}" cy="{h/2}" r="{ring_r}" stroke="#1c1c1e" stroke-width="3.4" fill="none"/>
+  <circle cx="{px + pw - 24}" cy="{h/2}" r="{ring_r}" stroke="#0a84ff" stroke-width="3.4" stroke-linecap="round" fill="none"
+          stroke-dasharray="{dash:.1f} {circ:.1f}" transform="rotate(-90 {px + pw - 24} {h/2})"/>
 </svg>
 """
 
@@ -571,7 +561,7 @@ def main():
     m = compute_metrics(data)
 
     outputs = {
-        "dynamic-island-v3.svg": build_dynamic_island(m),
+        "dynamic-island-v4.svg": build_dynamic_island(m),
         "widget-bio.svg": build_bio_widget(),
         "widget-commits-mesh.svg": build_counter_widget(m),
         "widget-rings.svg": build_rings_widget(m),
