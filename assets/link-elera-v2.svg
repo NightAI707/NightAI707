@@ -1,0 +1,71 @@
+<svg fill="none" viewBox="0 0 274 72" width="100%" xmlns="http://www.w3.org/2000/svg">
+  
+  <defs>
+    <linearGradient id="cardDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#16161a"/>
+      <stop offset="100%" stop-color="#0b0b0d"/>
+    </linearGradient>
+    <linearGradient id="cardRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.26"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.16"/>
+    </linearGradient>
+    <linearGradient id="tideArea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a84ff" stop-opacity="0.48"/>
+      <stop offset="100%" stop-color="#0a84ff" stop-opacity="0.0"/>
+    </linearGradient>
+    <linearGradient id="sheenSweep" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <defs>
+    <clipPath id="clip_eleraai_v2">
+      <rect x="1.5" y="1.5" width="271" height="69" rx="34.5"/>
+    </clipPath>
+    <linearGradient id="horiz_eleraai_v2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff5e3a"/>
+      <stop offset="48%" stop-color="#ff5e3a" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffd166"/>
+    </linearGradient>
+    <linearGradient id="vertFade_eleraai_v2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050507" stop-opacity="0.88"/>
+      <stop offset="28%" stop-color="#050507" stop-opacity="0.45"/>
+      <stop offset="60%" stop-color="#050507" stop-opacity="0.0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.28"/>
+    </linearGradient>
+    <radialGradient id="btmGlow_eleraai_v2" cx="50%" cy="100%" r="75%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.52"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      <animate attributeName="cx" values="35%;65%;35%" dur="6s" repeatCount="indefinite"/>
+    </radialGradient>
+    <linearGradient id="rim_eleraai_v2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="75%" stop-color="#ffffff" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.92"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#clip_eleraai_v2)">
+    <rect width="274" height="72" fill="#050507"/>
+    <rect width="274" height="72" fill="url(#horiz_eleraai_v2)"/>
+    <rect width="274" height="72" fill="url(#vertFade_eleraai_v2)"/>
+    <rect width="274" height="72" fill="url(#btmGlow_eleraai_v2)"/>
+    <rect x="-120" y="0" width="90" height="72" fill="url(#sheenSweep)" transform="skewX(-20)">
+      <animate attributeName="x" values="-140;374" dur="5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <rect x="1.5" y="1.5" width="271" height="69" rx="34.5" fill="none" stroke="url(#rim_eleraai_v2)" stroke-width="1.5"/>
+  <text x="28" y="42" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif" font-size="17" font-weight="500" letter-spacing="-0.2" fill="#f5f5f7">Elera AI</text>
+  <circle cx="238" cy="36.0" r="22" fill="#ffffff"/>
+  <path d="M230 36.0 H246 M240 30.0 L246 36.0 L240 42.0" stroke="#ffd166" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <animateTransform attributeName="transform" type="translate" values="0,0; 2.5,0; 0,0" dur="2.4s" repeatCount="indefinite"/>
+  </path>
+</svg>
